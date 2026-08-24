@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bu0cstes3tgqv"]
+
+[ext_resource type="PackedScene" uid="uid://dgtv7dhcq8qjc" path="res://Scenes/Character/Prota_teste.tscn" id="1_skxqx"]
+
+[node name="Boss_Scene" type="Node2D" unique_id=259593005]
+
+[node name="Prota_Teste" parent="." unique_id=2026626943 instance=ExtResource("1_skxqx")]
+position = Vector2(266, 273)
