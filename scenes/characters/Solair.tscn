@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://djp75rh3ixcco"]
+
+[ext_resource type="Script" uid="uid://bh7iqimsbj3s2" path="res://scipts/solair.gd" id="1_pkw0b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kejrx"]
+
+[node name="Solair" type="CharacterBody2D" unique_id=252625353]
+script = ExtResource("1_pkw0b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410345407]
+sprite_frames = SubResource("SpriteFrames_kejrx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2141661597]
