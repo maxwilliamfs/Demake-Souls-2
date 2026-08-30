@@ -5,4 +5,5 @@
 [node name="Tutorial" type="Node2D" unique_id=20960459]
 
 [node name="Solair" parent="." unique_id=252625353 instance=ExtResource("1_c13y7")]
-position = Vector2(-66, 234)
+position = Vector2(279, 221)
+scale = Vector2(2, 2)

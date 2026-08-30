@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1dk1na0126fy"
-path="res://.godot/imported/attack2_right.png-48ec58f5ad743bd1051d2fde4c6c733c.ctex"
+uid="uid://gwqi8msnm11q"
+path="res://.godot/imported/lightattack_right.png-582d5f9e960e58afce8ddc0a47b388e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Solair/attack/attack2_right.png"
-dest_files=["res://.godot/imported/attack2_right.png-48ec58f5ad743bd1051d2fde4c6c733c.ctex"]
+source_file="res://sprites/Solair/attack/lightattack_right.png"
+dest_files=["res://.godot/imported/lightattack_right.png-582d5f9e960e58afce8ddc0a47b388e2.ctex"]
 
 [params]
 

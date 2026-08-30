@@ -1,6 +1,3 @@
-res://Scenes/fase.tscn
-res://Scripts/cursed.gd
-res://scenes/characters/tutorial.tscn
-res://scenes/tutorial.tscn
 res://scenes/characters/Solair.tscn
-res://scipts/solair.gd
+res://scripts/solair.gd
+res://scenes/tutorial.tscn

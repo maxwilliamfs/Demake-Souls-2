@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnsjlamq4qc8m"
-path="res://.godot/imported/Healing.png-d863131247ebbea5da3f251af7a39c8d.ctex"
+uid="uid://b1qcydu6lvng8"
+path="res://.godot/imported/Healing_right.png-48e52c2274fa0d5a6bc5bd2612afa95a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Solair/others/Healing.png"
-dest_files=["res://.godot/imported/Healing.png-d863131247ebbea5da3f251af7a39c8d.ctex"]
+source_file="res://sprites/Solair/others/Healing_right.png"
+dest_files=["res://.godot/imported/Healing_right.png-48e52c2274fa0d5a6bc5bd2612afa95a.ctex"]
 
 [params]
 
