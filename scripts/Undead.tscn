@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c8wbba43cdtj4"]
 
 [ext_resource type="Texture2D" uid="uid://cy1trijewsmlw" path="res://sprites/undead/idle/idle_left.png" id="1_kcgxo"]
+[ext_resource type="Script" uid="uid://b1gy8k41mt1bi" path="res://scripts/undead.gd" id="1_s87lk"]
 [ext_resource type="Texture2D" uid="uid://bxpd5l5l0kjq0" path="res://sprites/undead/idle/idle_right.png" id="2_s87lk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lfgly"]
@@ -127,7 +128,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q0uhb")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"idle_left",
 "speed": 10.0
 }, {
@@ -165,7 +166,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_35ytc")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"idle_right",
 "speed": 10.0
 }]
@@ -173,11 +174,14 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_df7md"]
 height = 56.0
 
-[node name="Undead" type="CharacterBody2D" unique_id=1005191574]
+[node name="Undead" type="CharacterBody2D" unique_id=1005191574 groups=["Enemy"]]
+scale = Vector2(2, 2)
+script = ExtResource("1_s87lk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=23282987]
 sprite_frames = SubResource("SpriteFrames_40bpm")
 animation = &"idle_left"
+frame_progress = 0.0330337
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1866415430]
 position = Vector2(2, 2)
@@ -186,4 +190,6 @@ shape = SubResource("CapsuleShape2D_df7md")
 [node name="Vision2D" type="Area2D" parent="." unique_id=443735832]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Vision2D" unique_id=1805840194]
-polygon = PackedVector2Array(28, -27, -89, -74, -88, 103, 24, 34)
+polygon = PackedVector2Array(28, -27, -107, -104, -141, -35, -141, 49, -108, 135, 28, 33)
+
+[connection signal="body_entered" from="Vision2D" to="." method="_on_vision_2d_body_entered"]

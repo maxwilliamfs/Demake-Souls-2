@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1788111676
+::res://::1788116910
 icon.svg::CompressedTexture2D::6451270279686810702::1787517513::1787517532::1::::<><><>0<>0<>63d43aa2f5b3a353480a2b3d20c10551<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1787179816::0::1::::<><><>0<>0<><>::
 ::res://musics/::1788039746
@@ -7,8 +7,9 @@ README.md::TextFile::-1::1787179816::0::1::::<><><>0<>0<><>::
 tutorial.tscn::PackedScene::1972019139012565601::1788057130::0::1::::<><><>0<>0<><>::uid://djp75rh3ixcco::::res://scenes/characters/Solair.tscn
 ::res://scenes/characters/::1788111779
 Solair.tscn::PackedScene::7823924732712537298::1788111779::0::1::::<><><>0<>0<><>::uid://7ceapi1oj6dk::::res://scripts/solair.gd<>uid://c6177m2ahi5ll::::res://sprites/Solair/damage/Damage-Left.png<>uid://bgo8q22m83uou::::res://sprites/Solair/damage/Damage-Right.png<>uid://b1qcydu6lvng8::::res://sprites/Solair/others/Healing_right.png<>uid://bu7eyp4k840h::::res://sprites/Solair/attack/heavyattack_left.png<>uid://b5x3lmui65ljs::::res://sprites/Solair/attack/heavyattack_right.png<>uid://cnv1ymrt730ww::::res://sprites/Solair/idle/idle_left.png<>uid://cea7nssqv4rgg::::res://sprites/Solair/idle/idle_right.png<>uid://bviy5o1jx3sel::::res://sprites/Solair/walk/walk_left.png<>uid://d1ipkja18v1dl::::res://sprites/Solair/walk/walk_right.png
-::res://scripts/::1788057365
+::res://scripts/::1788113056
 solair.gd::GDScript::2250415421305328596::1788057365::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Undead.tscn::PackedScene::7134552066891590035::1788113056::0::1::::<><><>0<>0<><>::uid://cy1trijewsmlw::::res://sprites/undead/idle/idle_left.png<>uid://bxpd5l5l0kjq0::::res://sprites/undead/idle/idle_right.png
 ::res://sprites/::1788112511
 ::res://sprites/itens/::1788111913
 almas_hud.png::CompressedTexture2D::7653514516400651493::1788056530::1788111913::1::::<><><>0<>0<>dd6c90d0d171934e13cdd27770e312dc<>res://.godot/imported/almas_hud.png-fdc20363cc933ec331a071aa6505c64b.ctex::
@@ -53,7 +54,7 @@ idle_right.png::CompressedTexture2D::4031966103108774941::1788056530::1788112497
 ::res://sprites/undead/walk/::1788112497
 walk_left.png::CompressedTexture2D::328496229243266652::1788056530::1788112497::1::::<><><>0<>0<>fe6c637e0263f06061a0dd2002df6f72<>res://.godot/imported/walk_left.png-591ab7b72d81ccfddd002913c772f3ca.ctex::
 walk_right.png::CompressedTexture2D::4060668584592922085::1788056530::1788112497::1::::<><><>0<>0<>27d8fd798214289c1e190b417d888490<>res://.godot/imported/walk_right.png-d52c808a632b86959b2781a5824a9ade.ctex::
-::res://sprites/Velha/::1788112511
+::res://sprites/Velha/::1788112526
 velha_estus_idle_left.png::CompressedTexture2D::5444406610449963657::1788112511::1788112526::1::::<><><>0<>0<>61f4de7cfa85dedd0dd219f05b51dfa9<>res://.godot/imported/velha_estus_idle_left.png-2759e4ca0d247cc322745052f2ed31af.ctex::
 velha_estus_idle_right.png::CompressedTexture2D::3236507692861174797::1788112511::1788112526::1::::<><><>0<>0<>a219210d0540ef90cafe21d824af3d59<>res://.godot/imported/velha_estus_idle_right.png-7966a226a6bf8af397e57be7d805dcae.ctex::
 velha_idle_left.png::CompressedTexture2D::6574813104276475931::1788112511::1788112526::1::::<><><>0<>0<>55d62f50ce8668ef85dc1d372754b205<>res://.godot/imported/velha_idle_left.png-1d1e1f337a942a4f947cda066814df61.ctex::

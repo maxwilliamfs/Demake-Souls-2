@@ -23,9 +23,8 @@ window/stretch/mode="canvas_items"
 
 [global_group]
 
-Protagonista=""
-Fundo=""
-Fundo1=""
+Player=""
+Enemy=""
 
 [input]
 

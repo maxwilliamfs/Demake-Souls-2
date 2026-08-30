@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://3di4qmwg65cn"]
 
 [ext_resource type="PackedScene" uid="uid://djp75rh3ixcco" path="res://scenes/characters/Solair.tscn" id="1_c13y7"]
+[ext_resource type="PackedScene" uid="uid://c8wbba43cdtj4" path="res://scripts/Undead.tscn" id="2_8ho6b"]
 
 [node name="Tutorial" type="Node2D" unique_id=20960459]
 
 [node name="Solair" parent="." unique_id=252625353 instance=ExtResource("1_c13y7")]
-position = Vector2(279, 221)
-scale = Vector2(2, 2)
+position = Vector2(87, 363)
+
+[node name="Undead" parent="." unique_id=1005191574 instance=ExtResource("2_8ho6b")]
+position = Vector2(1163, 208)
+
+[node name="Undead2" parent="." unique_id=1517027626 instance=ExtResource("2_8ho6b")]
+position = Vector2(1168, 522)

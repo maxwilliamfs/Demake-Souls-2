@@ -833,7 +833,8 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pkw0b"]
 height = 58.0
 
-[node name="Solair" type="CharacterBody2D" unique_id=252625353]
+[node name="Solair" type="CharacterBody2D" unique_id=252625353 groups=["Player"]]
+scale = Vector2(2, 2)
 script = ExtResource("1_72w1d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410345407]

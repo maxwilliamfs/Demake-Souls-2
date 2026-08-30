@@ -13,7 +13,7 @@ var vector_diretional : Vector2 = Vector2(0,0)
 var velocity_ : int = 400
 
 #Instancias
-@onready var sprite_animacao = $AnimatedSprite2D
+@onready var sprite_animation = $AnimatedSprite2D
 
 #Funcoes padroes
 func _physics_process(_delta: float) -> void:
@@ -60,9 +60,9 @@ func processing_free() -> void:
 
 func choose_animation() -> void:
 	if vector_diretional.x > 0:
-		sprite_animacao.play("run_right")
+		sprite_animation.play("run_right")
 	elif vector_diretional.x < 0:
-		sprite_animacao.play("run_left")
+		sprite_animation.play("run_left")
 	elif vector_diretional.y != 0:
 		diretional_animation("run_right","run_left")
 	else:
@@ -70,9 +70,9 @@ func choose_animation() -> void:
 
 func diretional_animation(animation1 : String, animation2 : String) -> void:
 	if actual_diretional == diretional.right:
-			sprite_animacao.play(animation1)
+			sprite_animation.play(animation1)
 	else:
-			sprite_animacao.play(animation2)
+			sprite_animation.play(animation2)
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	actual_state = state.free
