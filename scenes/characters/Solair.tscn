@@ -467,7 +467,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_eabmo")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"damage_left",
 "speed": 9.0
 }, {
@@ -493,12 +493,12 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oeson")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"damage_right",
 "speed": 9.0
 }, {
 "frames": [],
-"loop": 1,
+"loop": 0,
 "name": &"healing_left",
 "speed": 5.0
 }, {
@@ -545,7 +545,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x6hn2")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"healing_right",
 "speed": 8.0
 }, {
@@ -592,9 +592,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6jcwg")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"heavyatk_left",
-"speed": 9.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -639,9 +639,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qj5m6")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"heavyatk_right",
-"speed": 9.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -683,7 +683,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_salnp")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"idle_left",
 "speed": 18.0
 }, {
@@ -727,17 +727,17 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_j8ini")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"idle_right",
 "speed": 18.0
 }, {
 "frames": [],
-"loop": 1,
+"loop": 0,
 "name": &"lightatk_left",
 "speed": 20.0
 }, {
 "frames": [],
-"loop": 1,
+"loop": 0,
 "name": &"lightatk_right",
 "speed": 14.0
 }, {
@@ -781,7 +781,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0hbef")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"run_left",
 "speed": 16.0
 }, {
@@ -825,7 +825,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nt3xa")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"run_right",
 "speed": 18.0
 }]
@@ -838,8 +838,7 @@ script = ExtResource("1_72w1d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410345407]
 sprite_frames = SubResource("SpriteFrames_kejrx")
-animation = &"idle_left"
-frame_progress = 0.019452628
+animation = &"heavyatk_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2141661597]
 position = Vector2(2, 4)

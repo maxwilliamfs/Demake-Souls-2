@@ -21,7 +21,9 @@ func _physics_process(_delta: float) -> void:
 		state.free:
 			processing_free()
 		state.heal:
-			print("bosta")
+			diretional_animation("healing_right","healing_left")
+		state.heavyatk:
+			diretional_animation("heavyatk_right","heavyatk_left")
 
 func processing_free() -> void:
 	if Input.is_action_just_pressed("heal"):
@@ -62,15 +64,15 @@ func choose_animation() -> void:
 	elif vector_diretional.x < 0:
 		sprite_animacao.play("run_left")
 	elif vector_diretional.y != 0:
-		if actual_diretional == diretional.right:
-			sprite_animacao.play("run_right")
-		else:
-			sprite_animacao.play("run_left")
+		diretional_animation("run_right","run_left")
 	else:
-		if actual_diretional == diretional.right:
-			sprite_animacao.play("idle_right")
-		else:
-			sprite_animacao.play("idle_left")
+		diretional_animation("idle_right","idle_left")
+
+func diretional_animation(animation1 : String, animation2 : String) -> void:
+	if actual_diretional == diretional.right:
+			sprite_animacao.play(animation1)
+	else:
+			sprite_animacao.play(animation2)
 
 func _on_animated_sprite_2d_animation_finished() -> void:
-	pass # Replace with function body.
+	actual_state = state.free
