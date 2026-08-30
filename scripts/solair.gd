@@ -10,7 +10,7 @@ var actual_diretional : diretional
 
 #Atributos
 var vector_diretional : Vector2 = Vector2(0,0)
-var velocity_ : int = 400
+var velocity_ : int = 200
 
 #Instancias
 @onready var sprite_animation = $AnimatedSprite2D
