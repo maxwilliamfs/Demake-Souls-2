@@ -47,8 +47,8 @@ func diretional_animation(animation1 : String, animation2 : String) -> void:
 			sprite_animation.play(animation2)
 
 func _on_vision_2d_body_entered(body: Node2D) -> void:
-	player = body
-	if player.is_in_group("Player"):
+	if body.is_in_group("Player"):
+		player = body
 		actual_state = state.pursue
 
 func _on_range_2d_body_entered(body: Node2D) -> void:

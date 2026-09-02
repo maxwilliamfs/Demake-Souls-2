@@ -664,7 +664,7 @@ radius = 5.5
 height = 58.0
 
 [node name="Undead" type="CharacterBody2D" unique_id=1005191574 groups=["Enemy"]]
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_s87lk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=23282987]

@@ -834,7 +834,7 @@ animations = [{
 height = 58.0
 
 [node name="Solair" type="CharacterBody2D" unique_id=252625353 groups=["Player"]]
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_72w1d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410345407]
