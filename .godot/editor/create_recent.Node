@@ -1,10 +1,10 @@
-AnimatedSprite2D
+Sprite2D
 TextureRect
+AnimatedSprite2D
 Camera2D
 TextureProgressBar
 ProgressBar
 VBoxContainer
-Sprite2D
 HBoxContainer
 Control
 CanvasLayer
@@ -12,4 +12,3 @@ CollisionShape2D
 Area2D
 Timer
 CollisionPolygon2D
-Node2D

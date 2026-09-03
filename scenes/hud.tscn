@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://0gmmsfso5r0" path="res://sprites/Itens/health_bar.png" id="3_047uy"]
 [ext_resource type="Texture2D" uid="uid://y3bt4fgoch20" path="res://sprites/Itens/stamin_bar.png" id="4_5pdws"]
 [ext_resource type="Texture2D" uid="uid://dqjt3ug3412c8" path="res://sprites/Itens/Estus_sprite_3.png" id="5_uo2fv"]
+[ext_resource type="Texture2D" uid="uid://bb84gg871v5gd" path="res://sprites/Itens/almas_hud_vazio.png" id="7_5pdws"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_047uy"]
 atlas = ExtResource("5_uo2fv")
@@ -98,10 +99,10 @@ texture_progress = ExtResource("4_5pdws")
 
 [node name="Invetory" type="TextureRect" parent="Control" unique_id=1905549157]
 layout_mode = 0
-offset_left = 39.0
-offset_top = 450.0
-offset_right = 103.0
-offset_bottom = 514.0
+offset_left = 18.000006
+offset_top = 477.00003
+offset_right = 82.00001
+offset_bottom = 541.0
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("2_5ysmq")
 metadata/_edit_group_ = true
@@ -111,3 +112,8 @@ position = Vector2(32.285713, 48.857147)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_kejrx")
 animation = &"Three"
+
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=677729776]
+position = Vector2(1167, 615)
+scale = Vector2(4, 4)
+texture = ExtResource("7_5pdws")
