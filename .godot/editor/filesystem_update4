@@ -1,3 +1,4 @@
+res://scenes/hud.tscn
+res://scenes/tutorial.tscn
 res://scripts/Undead.tscn
-res://scripts/undead.gd
 res://scenes/characters/Solair.tscn
