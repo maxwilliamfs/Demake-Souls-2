@@ -28,12 +28,12 @@ slots_Inventario_vazios.png::CompressedTexture2D::6035435630214512150::178838784
 stamin_bar.png::CompressedTexture2D::1742431002695995579::1788449876::1788449879::1::::<><><>0<>0<>4a92282f4bf69d1e82f60668355fd6f3<>res://.godot/imported/stamin_bar.png-6bcd009f5cab159d82ce8f40d7d0f37c.ctex::
 Vida_Stamina_Moldura_completo.png::CompressedTexture2D::8726202530463870175::1788387845::1788387871::1::::<><><>0<>0<>c3ed2428b84a0e84b994542193ee4a18<>res://.godot/imported/Vida_Stamina_Moldura_completo.png-fa06bfbc26c61267164db1637ed9c6a9.ctex::
 ::res://sprites/Solair/::1788056530
-::res://sprites/Solair/attack/::1788045771
+::res://sprites/Solair/attack/::1788462898
+attack2_left.png::CompressedTexture2D::321020212902329604::1788462898::1788462902::1::::<><><>0<>0<>f11cdbdbde35563f45de31a7776e7d84<>res://.godot/imported/attack2_left.png-cdec4c9679fe09367c95c238e4d205b0.ctex::
 heavyattack_left.png::CompressedTexture2D::113427770728166101::1788033199::1788045771::1::::<><><>0<>0<>6b13815f764a39117b57204b612062f8<>res://.godot/imported/heavyattack_left.png-789401629390f5a82448c3ce50c7bcba.ctex::
 heavyattack_right.png::CompressedTexture2D::4541287062290254288::1787957473::1788045771::1::::<><><>0<>0<>82c4628c6a3bfe956b8f871b57840f92<>res://.godot/imported/heavyattack_right.png-b4dc2300f89b9df5505b64eb9d14a548.ctex::
-lightattack_left.png::CompressedTexture2D::8071951956948100624::1787940468::1788045771::1::::<><><>0<>0<>7f7841713f18b5e6de47387f0f0af43c<>res://.godot/imported/lightattack_left.png-60e8674adece8d00435196a08de649a2.ctex::
 lightattack_right.png::CompressedTexture2D::467536883296932316::1787965262::1788045771::1::::<><><>0<>0<>c44d3b008dde749ff2e12bd5b45ba746<>res://.godot/imported/lightattack_right.png-582d5f9e960e58afce8ddc0a47b388e2.ctex::
-::res://sprites/Solair/damage/::1788462626
+::res://sprites/Solair/damage/::1788462631
 Damage-Left.png::CompressedTexture2D::7004370102943868521::1788033132::1788044824::1::::<><><>0<>0<>f1acea58c80770014ff663c1cd5bc190<>res://.godot/imported/Damage-Left.png-93d8c2c948d3c51c8c0254a93d0304d6.ctex::
 Damage-Right.png::CompressedTexture2D::2838488727972525296::1787975491::1788044824::1::::<><><>0<>0<>45c42939717b382b970637c61393c697<>res://.godot/imported/Damage-Right.png-c700cd4496cd90264fff8ab2c1e4436f.ctex::
 dead_move_left.png::CompressedTexture2D::4628633682861802158::1788462626::1788462631::1::::<><><>0<>0<>90946caaee885ceeb3b7e6416b1c232c<>res://.godot/imported/dead_move_left.png-5db29b170b8c8586718b35c2e88983ef.ctex::
@@ -50,7 +50,7 @@ run_right_test_17frames.png::CompressedTexture2D::4428495530860161638::178805653
 ::res://sprites/Solair/walk/::1788045395
 walk_left.png::CompressedTexture2D::3878412979700394187::1787940468::1788045395::1::::<><><>0<>0<>7076828a05e8ccb18b9cd59de9642805<>res://.godot/imported/walk_left.png-1c224eda251a4ddd4bff037d6d6b62c1.ctex::
 walk_right.png::CompressedTexture2D::9001616094467596241::1787940407::1788044824::1::::<><><>0<>0<>b55cba6d78fd44d30350de7b32306bd2<>res://.godot/imported/walk_right.png-7d70a071867ba079c90c5055cb7e55dd.ctex::
-::res://sprites/The_Pursuer/::1788462626
+::res://sprites/The_Pursuer/::1788462631
 Idle_front_Pursuer.png::CompressedTexture2D::5964465353302258765::1788462626::1788462630::1::::<><><>0<>0<>66824853823e7ec75df3a42c566b42d2<>res://.godot/imported/Idle_front_Pursuer.png-cfeb80665d30f3856523a21df290d626.ctex::
 Pursuer_idle_left.png::CompressedTexture2D::1860536674609880039::1788462626::1788462630::1::::<><><>0<>0<>521ff71583e1e575319af81c8dbe42ab<>res://.godot/imported/Pursuer_idle_left.png-861f123e33d871d8a381e748b4f62d4b.ctex::
 pursuer_idle_right.png::CompressedTexture2D::4606759199645354035::1788462626::1788462631::1::::<><><>0<>0<>9e2f75e2dffe1cd5caffe88d10c09129<>res://.godot/imported/pursuer_idle_right.png-931c467d9309aca82fe85d19fcf8162d.ctex::
@@ -58,7 +58,7 @@ Pursuer_walk_left.png::CompressedTexture2D::1801964939637663921::1788462626::178
 Pursuer_walk_right.png::CompressedTexture2D::7911882551561621043::1788462626::1788462631::1::::<><><>0<>0<>bd2f66655c18e76a35e611494e950674<>res://.godot/imported/Pursuer_walk_right.png-150eb29f76ac12f997d96191d9562064.ctex::
 ::res://sprites/undead/::1788112497
 enemy_arms_up_pose.jpg::CompressedTexture2D::3246316443605374590::1788056530::1788112497::1::::<><><>0<>0<>f9a205dde927925568135b082b9b4cf7<>res://.godot/imported/enemy_arms_up_pose.jpg-b70775c51773fa6f85068878cf72075b.ctex::
-::res://sprites/undead/actions/::1788462626
+::res://sprites/undead/actions/::1788462631
 dead_enemy_left.png::CompressedTexture2D::4274830770909895781::1788462626::1788462631::1::::<><><>0<>0<>18f3e4d088ea599805650c6c3329be8a<>res://.godot/imported/dead_enemy_left.png-a7417dc3374f3b9a448d22057263cb0e.ctex::
 dead_enemy_right.png::CompressedTexture2D::4543458878376846920::1788462626::1788462631::1::::<><><>0<>0<>004f640cd2f2fdca82878aa0d82c4959<>res://.godot/imported/dead_enemy_right.png-5b6fc09781c5b7cdd85b20bcebb7951a.ctex::
 hit_red_left.png::CompressedTexture2D::3961866906855559719::1788056530::1788112497::1::::<><><>0<>0<>7c28271d63567a8081e62af1aa4d178b<>res://.godot/imported/hit_red_left.png-81466711d3b033f6117a38755ab4a30e.ctex::

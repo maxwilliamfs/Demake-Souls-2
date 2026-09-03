@@ -21,3 +21,4 @@ position = Vector2(1188, 524)
 
 [connection signal="damage_taken" from="Solair" to="Hud" method="_on_solair_damage_taken"]
 [connection signal="estus" from="Solair" to="Hud" method="_on_solair_estus"]
+[connection signal="death" from="Hud" to="Solair" method="_on_hud_death"]

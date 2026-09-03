@@ -4,3 +4,7 @@ res://scripts/Undead.tscn
 res://scripts/solair.gd
 res://scenes/hud.tscn
 res://scripts/hud.gd
+res://scenes/characters/pursuer_teste.tscn
+res://scripts/pursuer_teste.gd
+res://scenes/tutorial.tscn
+res://scenes/teste.tscn

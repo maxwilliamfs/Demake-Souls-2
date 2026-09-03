@@ -11,8 +11,15 @@ var life : int = 100
 @onready var stamina_bar = $Control/Base_Life/Stamina
 @onready var estus_animation = $Control/Invetory/Estus
 
-#Funcoes
+#Signals
+signal death
 
+#Funcoes Proprias
+func _process(_delta: float) -> void:
+	if life <= 0:
+		death.emit()
+
+#Funcoes
 func use_estus() -> void:
 	if estus <= 0:
 		return

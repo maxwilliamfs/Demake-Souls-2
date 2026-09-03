@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #Enuns
-enum state {free,heal,heavyatk,lightatk,damage}
+enum state {free,heal,heavyatk,lightatk,damage,death}
 enum diretional {left,right}
 
 #Declaraçoes de Enuns
@@ -22,6 +22,8 @@ signal estus
 
 #Instancias
 @onready var sprite_animation = $AnimatedSprite2D
+@onready var pivot = $Pivot
+@onready var solair = $"."
 
 #Funcoes padroes
 func _physics_process(_delta: float) -> void:
@@ -41,6 +43,10 @@ func _physics_process(_delta: float) -> void:
 			diretional_animation("damage_right","damage_left")
 			velocity = knockback_vector
 			move_and_slide()
+		state.death:
+			velocity = Vector2.ZERO
+			move_and_slide()
+			pivot.hide()
 
 func processing_free() -> void:
 	if Input.is_action_just_pressed("heal"):
@@ -90,17 +96,26 @@ func diretional_animation(animation1 : String, animation2 : String) -> void:
 			sprite_animation.play(animation1)
 	else:
 			sprite_animation.play(animation2)
-			
 
 #Signals Emiteds
 
 func take_damage(damage : int, attacker_position : Vector2) -> void:
+	if actual_state == state.death:
+		return
 	actual_state = state.damage
-	damage_taken.emit(damage)
 	var knockback_direction: Vector2 = (global_position - attacker_position).normalized()
 	knockback_vector = knockback_direction * knockback_force
+	damage_taken.emit(damage)
 
 #Signals Reciveds
 
 func _on_animated_sprite_2d_animation_finished() -> void:
+	if actual_state == state.death:
+		solair.hide()
+		set_physics_process(false)
+		return
 	actual_state = state.free
+
+func _on_hud_death() -> void:
+	actual_state = state.death
+	diretional_animation("death_right","death_left")
