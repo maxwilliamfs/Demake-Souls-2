@@ -1,13 +1,13 @@
+Label
 CollisionShape2D
+AnimatedSprite2D
 Area2D
 ColorRect
 AudioStreamPlayer2D
-Label
 Timer
 Control
 TextureRect
 Camera2D
-AnimatedSprite2D
 CharacterBody2D
 Sprite2D
 TextureProgressBar

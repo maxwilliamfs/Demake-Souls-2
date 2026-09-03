@@ -28,6 +28,7 @@ window/stretch/aspect="expand"
 Player=""
 Enemy=""
 player_hurtbox=""
+collectables=""
 
 [input]
 
@@ -76,6 +77,7 @@ heavy_attack={
 2d_render/layer_5="Plater_HurtBox"
 2d_render/layer_6="Enemy_Hitbox"
 2d_render/layer_7="Enemy_HurtBox"
+2d_render/layer_8="collectables"
 
 [physics]
 

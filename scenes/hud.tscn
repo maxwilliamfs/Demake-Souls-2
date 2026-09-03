@@ -61,6 +61,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_0ucnw"]
+font = ExtResource("8_hd3ao")
+font_size = 34
+
 [sub_resource type="LabelSettings" id="LabelSettings_kejrx"]
 font = ExtResource("8_hd3ao")
 font_size = 150
@@ -120,10 +124,20 @@ scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_kejrx")
 animation = &"Three"
 
-[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=677729776]
+[node name="Souls" type="Sprite2D" parent="Control" unique_id=677729776]
 position = Vector2(1167, 615)
 scale = Vector2(4, 4)
 texture = ExtResource("7_5pdws")
+
+[node name="Souls_Label" type="Label" parent="Control" unique_id=1971623683]
+layout_mode = 0
+offset_left = 1153.0
+offset_top = 645.0
+offset_right = 1213.0
+offset_bottom = 683.0
+text = "0"
+label_settings = SubResource("LabelSettings_0ucnw")
+horizontal_alignment = 2
 
 [node name="Death" type="Control" parent="." unique_id=1345788045]
 visible = false

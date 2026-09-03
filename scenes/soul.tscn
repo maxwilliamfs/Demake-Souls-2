@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dddi0ryggypc"]
+
+[ext_resource type="Texture2D" uid="uid://dm4mwux2m0pi3" path="res://sprites/Itens/Alma_no_chao.png" id="1_ivn1w"]
+[ext_resource type="Script" uid="uid://7cqx86375b8h" path="res://scripts/soul.gd" id="1_jnmxf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnmxf"]
+atlas = ExtResource("1_ivn1w")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt1lx"]
+atlas = ExtResource("1_ivn1w")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6usl"]
+atlas = ExtResource("1_ivn1w")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf18v"]
+atlas = ExtResource("1_ivn1w")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqx3q"]
+atlas = ExtResource("1_ivn1w")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hweci"]
+atlas = ExtResource("1_ivn1w")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dtty"]
+atlas = ExtResource("1_ivn1w")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7m5t"]
+atlas = ExtResource("1_ivn1w")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kejrx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnmxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt1lx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6usl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jf18v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqx3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hweci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dtty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7m5t")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 15.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kejrx"]
+radius = 21.0
+
+[node name="Soul" type="Area2D" unique_id=145826852 groups=["collectables"]]
+collision_layer = 128
+collision_mask = 2
+script = ExtResource("1_jnmxf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1025300812]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_kejrx")
+animation = &"idle"
+frame_progress = 0.8504979
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1667973850]
+shape = SubResource("CircleShape2D_kejrx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

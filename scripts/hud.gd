@@ -6,6 +6,7 @@ var estus_health : int = 40
 var tween: Tween
 var life : int = 100
 var is_dead : bool = false
+var souls : int = 0
 
 #Instancias
 @onready var life_bar = $Control/Base_Life/Life
@@ -14,12 +15,14 @@ var is_dead : bool = false
 @onready var death_timer = $Death/DeathTimer
 @onready var death_scene = $Death
 @onready var death_audio = $Death/Death_audio
+@onready var souls_label = $Control/Souls_Label
 
 #Signals
 signal death
 
 #Funcoes Proprias
 func _process(_delta: float) -> void:
+	souls_label.text = str(souls)
 	if life <= 0 and !is_dead:
 		death.emit()
 		death_timer.start()
@@ -66,3 +69,6 @@ func _on_death_timer_timeout() -> void:
 	death_scene.modulate.a = 0.0 
 	var tween = create_tween()
 	tween.tween_property(death_scene, "modulate:a", 1.0, 2.5)
+
+func _on_solair_souls(value: int) -> void:
+	souls += value

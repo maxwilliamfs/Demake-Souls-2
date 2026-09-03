@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #Enuns
-enum state {idle,pursue,attack,cooldown,damage}
+enum state {idle,pursue,attack,cooldown,damage,death}
 enum diretional {left,right}
 
 #Declaracoes de Enuns
@@ -17,9 +17,11 @@ var attack_trigger : bool = false
 var direction_trigger
 var player_in_range : bool = false
 var knockback_vector : Vector2
-var knockback_force : int = 400
+var knockback_force : int = 150
+var souls_dropped : int = 300
 
 #Pre Processamento
+const SOUL_SCENE = preload("res://scenes/soul.tscn")
 @export var initial_diretional : diretional
 
 #Instacias
@@ -27,6 +29,7 @@ var knockback_force : int = 400
 @onready var combat_pivot = $Pivot
 @onready var cooldown_timer = $CooldownTimer
 @onready var range_2d = $Pivot/Range2D
+@onready var hitbox = $Pivot/Hitbox2D
 
 func _ready() -> void:
 	actual_diretional = initial_diretional
@@ -37,22 +40,39 @@ func _ready() -> void:
 	diretional_animation("idle_right","idle_left")
 
 func _physics_process(delta: float) -> void:
+	if life <= 0:
+		actual_state = state.death
 	match actual_state:
 		state.pursue:
+			hitbox.monitoring = true
 			pursue()
 		state.attack:
 			attack()
 		state.cooldown:
+			hitbox.monitoring = false
 			velocity = Vector2.ZERO
 			move_and_slide()
 		state.damage:
 			diretional_animation("damage_right","damage_left")
 			velocity = knockback_vector
 			move_and_slide()
+		state.death:
+			diretional_animation("death_right","death_left")
+			velocity = Vector2.ZERO
 
 func take_damage(damage : int,attack_position : Vector2) -> void:
+	if actual_state == state.death:
+		return
 	life -= damage
-	knockback_vector = (attack_position - global_position) * knockback_force
+	attack_trigger = false
+	if attack_position.x > global_position.x:
+		actual_diretional = diretional.right
+		combat_pivot.scale.x = -1
+	else:
+		actual_diretional = diretional.left
+		combat_pivot.scale.x = 1
+	var knockback_direction = (global_position - attack_position).normalized()
+	knockback_vector = knockback_direction * knockback_force
 	actual_state = state.damage
 
 func attack() -> void:
@@ -102,6 +122,22 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		diretional_animation("idle_right","idle_left")
 		actual_state = state.cooldown
 		cooldown_timer.start()
+	elif anim_atual in ["damage_right", "damage_left"] and actual_state == state.damage:
+		velocity = Vector2.ZERO
+		actual_state = state.pursue
+	elif actual_state == state.death:
+		drop_soul()
+		queue_free()
+
+func drop_soul() -> void:
+	var soul_instance = SOUL_SCENE.instantiate()
+	soul_instance.souls_value = souls_dropped
+	soul_instance.global_position = global_position
+	soul_instance.modulate.a = 0
+	get_parent().add_child(soul_instance)
+	var tween = create_tween().bind_node(soul_instance)
+	tween.tween_property(soul_instance,"modulate:a",1,3)
+	await tween.finished
 
 func _on_range_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):

@@ -1263,7 +1263,7 @@ script = ExtResource("1_s87lk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=23282987]
 sprite_frames = SubResource("SpriteFrames_40bpm")
-animation = &"damage_right"
+animation = &"idle_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1866415430]
 position = Vector2(-3.3333335, 24.666668)
@@ -1304,7 +1304,7 @@ scale = Vector2(10, 10)
 shape = SubResource("CapsuleShape2D_kejrx")
 
 [node name="CooldownTimer" type="Timer" parent="." unique_id=1752088456]
-wait_time = 1.5
+wait_time = 2.5
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_shape_entered" from="Pivot/Hitbox2D" to="." method="_on_hitbox_2d_area_shape_entered"]
