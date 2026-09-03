@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cea7nssqv4rgg" path="res://sprites/Solair/idle/idle_right.png" id="8_4rdw6"]
 [ext_resource type="Texture2D" uid="uid://bviy5o1jx3sel" path="res://sprites/Solair/walk/walk_left.png" id="9_fnbtf"]
 [ext_resource type="Texture2D" uid="uid://d1ipkja18v1dl" path="res://sprites/Solair/walk/walk_right.png" id="10_l228d"]
+[ext_resource type="Texture2D" uid="uid://gwqi8msnm11q" path="res://sprites/Solair/attack/lightattack_right.png" id="10_og2dw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efhoa"]
 atlas = ExtResource("2_72w1d")
@@ -395,6 +396,62 @@ region = Rect2(704, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_j8ini"]
 atlas = ExtResource("8_4rdw6")
 region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03yol"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3wi6"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x41gl"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1s642"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4nci"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vuy5k"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2nn1"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qnmc"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqb0j"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00m0q"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4bfu"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccjqd"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2534d"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmx86"]
+atlas = ExtResource("10_og2dw")
+region = Rect2(832, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_be2o3"]
 atlas = ExtResource("9_fnbtf")
@@ -835,10 +892,52 @@ animations = [{
 "name": &"lightatk_left",
 "speed": 20.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03yol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3wi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x41gl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1s642")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4nci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vuy5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2nn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qnmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqb0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00m0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4bfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccjqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2534d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmx86")
+}],
 "loop": 0,
 "name": &"lightatk_right",
-"speed": 14.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -943,9 +1042,7 @@ script = ExtResource("1_72w1d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410345407]
 sprite_frames = SubResource("SpriteFrames_kejrx")
-animation = &"healing_left"
-frame = 13
-frame_progress = 1.0
+animation = &"lightatk_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2141661597]
 position = Vector2(3.3333333, 25.333334)

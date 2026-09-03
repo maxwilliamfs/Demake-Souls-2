@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnad4tbb4e2ka"
-path="res://.godot/imported/lightattack_left.png-60e8674adece8d00435196a08de649a2.ctex"
+uid="uid://b6vsweroik404"
+path="res://.godot/imported/pursuer_idle_right.png-931c467d9309aca82fe85d19fcf8162d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Solair/attack/lightattack_left.png"
-dest_files=["res://.godot/imported/lightattack_left.png-60e8674adece8d00435196a08de649a2.ctex"]
+source_file="res://sprites/The_Pursuer/pursuer_idle_right.png"
+dest_files=["res://.godot/imported/pursuer_idle_right.png-931c467d9309aca82fe85d19fcf8162d.ctex"]
 
 [params]
 
