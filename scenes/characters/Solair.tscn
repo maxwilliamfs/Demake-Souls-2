@@ -70,59 +70,59 @@ region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sw243"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(0, 0, 64, 64)
+region = Rect2(832, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oibnx"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(64, 0, 64, 64)
+region = Rect2(768, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1aq5k"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(128, 0, 64, 64)
+region = Rect2(704, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ql2o"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(192, 0, 64, 64)
+region = Rect2(640, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wvcw"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(256, 0, 64, 64)
+region = Rect2(576, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ol3q"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(320, 0, 64, 64)
+region = Rect2(512, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v6b2p"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(384, 0, 64, 64)
+region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vwvbj"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(448, 0, 64, 64)
+region = Rect2(384, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5k33w"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(512, 0, 64, 64)
+region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jcjo"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(576, 0, 64, 64)
+region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_500f0"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(640, 0, 64, 64)
+region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1aa6r"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(704, 0, 64, 64)
+region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7pivb"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(768, 0, 64, 64)
+region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4xb86"]
 atlas = ExtResource("4_3w21t")
-region = Rect2(832, 0, 64, 64)
+region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_knrtk"]
 atlas = ExtResource("4_og2dw")
@@ -944,6 +944,8 @@ script = ExtResource("1_72w1d")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410345407]
 sprite_frames = SubResource("SpriteFrames_kejrx")
 animation = &"healing_left"
+frame = 13
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2141661597]
 position = Vector2(3.3333333, 25.333334)
