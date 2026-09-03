@@ -32,9 +32,9 @@ func processing_free() -> void:
 	elif Input.is_action_just_pressed("heavy_attack"):
 		actual_state = state.heavyatk
 		return
-	elif Input.is_action_just_pressed("light_attack"):
-		actual_state = state.lightatk
-		return
+	##elif Input.is_action_just_pressed("light_attack"):
+		##actual_state = state.lightatk
+		##return
 	
 	#Movimento Horizontal
 	if Input.is_action_pressed("mov_right"):
