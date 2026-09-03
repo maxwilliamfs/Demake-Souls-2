@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6bpilileqhcq"
-path="res://.godot/imported/barra_de_stamina.png-ad800bd7805261c11a7d78851c4f4103.ctex"
+uid="uid://67c53mmiw7w"
+path="res://.godot/imported/Healing_left.png-2cab61b521142e78cabf3f31dc264204.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Itens/barra_de_stamina.png"
-dest_files=["res://.godot/imported/barra_de_stamina.png-ad800bd7805261c11a7d78851c4f4103.ctex"]
+source_file="res://sprites/Solair/others/Healing_left.png"
+dest_files=["res://.godot/imported/Healing_left.png-2cab61b521142e78cabf3f31dc264204.ctex"]
 
 [params]
 

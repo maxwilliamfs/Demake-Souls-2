@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cf8pjs4blxcws" path="res://scripts/hud.gd" id="1_047uy"]
 [ext_resource type="Texture2D" uid="uid://cyumqoav3qcst" path="res://sprites/Itens/moldura_vida.png" id="1_oo0fn"]
 [ext_resource type="Texture2D" uid="uid://cr8u0i7rbodoo" path="res://sprites/Itens/slots_Inventario_vazios.png" id="2_5ysmq"]
-[ext_resource type="Texture2D" uid="uid://dfnbr5c6dl4n3" path="res://sprites/Itens/barra_de_vida.png" id="2_6fi6k"]
-[ext_resource type="Texture2D" uid="uid://6bpilileqhcq" path="res://sprites/Itens/barra_de_stamina.png" id="3_uo2fv"]
+[ext_resource type="Texture2D" uid="uid://0gmmsfso5r0" path="res://sprites/Itens/health_bar.png" id="3_047uy"]
+[ext_resource type="Texture2D" uid="uid://y3bt4fgoch20" path="res://sprites/Itens/stamin_bar.png" id="4_5pdws"]
 [ext_resource type="Texture2D" uid="uid://dqjt3ug3412c8" path="res://sprites/Itens/Estus_sprite_3.png" id="5_uo2fv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_047uy"]
@@ -77,21 +77,24 @@ offset_right = 87.0
 offset_bottom = -2.9999924
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("1_oo0fn")
-metadata/_edit_group_ = true
 
 [node name="Life" type="TextureProgressBar" parent="Control/Base_Life" unique_id=1974835091]
 layout_mode = 0
-offset_right = 64.0
-offset_bottom = 64.0
+offset_left = 18.285713
+offset_top = 29.999996
+offset_right = 61.285713
+offset_bottom = 31.999996
 value = 100.0
-texture_progress = ExtResource("2_6fi6k")
+texture_progress = ExtResource("3_047uy")
 
 [node name="Stamina" type="TextureProgressBar" parent="Control/Base_Life" unique_id=1509928661]
 layout_mode = 0
-offset_right = 64.0
-offset_bottom = 64.0
+offset_left = 18.285713
+offset_top = 34.85714
+offset_right = 57.285713
+offset_bottom = 36.85714
 value = 100.0
-texture_progress = ExtResource("3_uo2fv")
+texture_progress = ExtResource("4_5pdws")
 
 [node name="Invetory" type="TextureRect" parent="Control" unique_id=1905549157]
 layout_mode = 0

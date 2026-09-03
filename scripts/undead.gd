@@ -9,7 +9,7 @@ var actual_state : state = state.idle
 var actual_diretional : diretional
 
 #Atributos
-var damage : int = 40
+var damage : int = 30
 var player : CharacterBody2D
 var _velocity : int = 100
 var attack_trigger : bool = false

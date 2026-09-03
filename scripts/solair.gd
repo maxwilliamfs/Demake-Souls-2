@@ -14,6 +14,7 @@ var velocity_ : int = 200
 var knockback_vector : Vector2
 var knockback_force : int = 400
 var estus_taked : bool = false
+var estus_qtd : int = 3
 
 #Signals
 signal damage_taken(damage : int)
@@ -32,6 +33,7 @@ func _physics_process(_delta: float) -> void:
 			diretional_animation("healing_right","healing_left")
 			if !estus_taked:
 				estus.emit()
+				estus_qtd -= 1
 				estus_taked = true
 		state.heavyatk:
 			diretional_animation("heavyatk_right","heavyatk_left")
@@ -42,11 +44,11 @@ func _physics_process(_delta: float) -> void:
 
 func processing_free() -> void:
 	if Input.is_action_just_pressed("heal"):
+		if estus_qtd <= 0:
+			return
 		actual_state = state.heal
-		return
 	elif Input.is_action_just_pressed("heavy_attack"):
 		actual_state = state.heavyatk
-		return
 	##elif Input.is_action_just_pressed("light_attack"):
 		##actual_state = state.lightatk
 		##return
