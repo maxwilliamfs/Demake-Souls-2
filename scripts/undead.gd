@@ -9,7 +9,7 @@ var actual_state : state = state.idle
 var actual_diretional : diretional
 
 #Atributos
-var damage : int = 30
+var damage : int = 40
 var player : CharacterBody2D
 var _velocity : int = 100
 var attack_trigger : bool = false
@@ -49,7 +49,7 @@ func attack() -> void:
 		direction_trigger = global_position.direction_to(player.global_position)
 		attack_trigger = true
 	
-	velocity = (_velocity + 100) * direction_trigger
+	velocity = (_velocity + 70) * direction_trigger
 	move_and_slide()
 
 func pursue() -> void:
@@ -84,10 +84,6 @@ func _on_range_2d_body_entered(body: Node2D) -> void:
 		if actual_state == state.pursue:
 			actual_state = state.attack
 
-func _on_hitbox_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player") and body.has_method("take_damage"):
-		body.take_damage(damage)
-
 func _on_animated_sprite_2d_animation_finished() -> void:
 	var anim_atual = sprite_animation.animation
 	if anim_atual in ["attack_right", "attack_left"] and actual_state == state.attack:
@@ -112,3 +108,9 @@ func _on_cooldown_timer_timeout() -> void:
 		actual_state = state.attack
 	else:
 		actual_state = state.pursue
+
+func _on_hitbox_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	if area.is_in_group("player_hurtbox"):
+		player = area.owner
+		if player and player.has_method("take_damage"):
+			player.take_damage(damage,global_position)

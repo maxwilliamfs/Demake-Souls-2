@@ -103,7 +103,7 @@ scale = Vector2(3.5, 3.5)
 texture = ExtResource("2_5ysmq")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/Invetory" unique_id=1967806288]
+[node name="Estus" type="AnimatedSprite2D" parent="Control/Invetory" unique_id=1967806288]
 position = Vector2(32.285713, 48.857147)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_kejrx")

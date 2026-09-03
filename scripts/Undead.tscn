@@ -965,7 +965,7 @@ shape = SubResource("CapsuleShape2D_kejrx")
 wait_time = 1.5
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="body_entered" from="Pivot/Hitbox2D" to="." method="_on_hitbox_2d_body_entered"]
+[connection signal="area_shape_entered" from="Pivot/Hitbox2D" to="." method="_on_hitbox_2d_area_shape_entered"]
 [connection signal="body_entered" from="Pivot/Vision2D" to="." method="_on_vision_2d_body_entered"]
 [connection signal="body_entered" from="Pivot/Range2D" to="." method="_on_range_2d_body_entered"]
 [connection signal="body_exited" from="Pivot/Range2D" to="." method="_on_range_2d_body_exited"]

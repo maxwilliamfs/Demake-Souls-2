@@ -844,7 +844,7 @@ script = ExtResource("1_72w1d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410345407]
 sprite_frames = SubResource("SpriteFrames_kejrx")
-animation = &"heavyatk_left"
+animation = &"idle_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2141661597]
 position = Vector2(3.3333333, 25.333334)
@@ -853,7 +853,7 @@ shape = SubResource("CapsuleShape2D_pkw0b")
 
 [node name="Pivot" type="Node2D" parent="." unique_id=1024154334]
 
-[node name="HurtBox2D" type="Area2D" parent="Pivot" unique_id=1622682737]
+[node name="HurtBox2D" type="Area2D" parent="Pivot" unique_id=1622682737 groups=["player_hurtbox"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/HurtBox2D" unique_id=1100879167]
 position = Vector2(2.6666667, 3.3333335)

@@ -27,6 +27,7 @@ window/stretch/aspect="expand"
 
 Player=""
 Enemy=""
+player_hurtbox=""
 
 [input]
 

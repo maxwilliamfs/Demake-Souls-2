@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #Enuns
-enum state {free,heal,heavyatk,lightatk}
+enum state {free,heal,heavyatk,lightatk,damage}
 enum diretional {left,right}
 
 #Declaraçoes de Enuns
@@ -11,6 +11,9 @@ var actual_diretional : diretional
 #Atributos
 var vector_diretional : Vector2 = Vector2(0,0)
 var velocity_ : int = 200
+var knockback_vector : Vector2
+var knockback_force : int = 400
+var estus_taked : bool = false
 
 #Signals
 signal damage_taken(damage : int)
@@ -23,12 +26,19 @@ signal estus
 func _physics_process(_delta: float) -> void:
 	match actual_state:
 		state.free:
+			estus_taked = false
 			processing_free()
 		state.heal:
 			diretional_animation("healing_right","healing_left")
-			estus.emit()
+			if !estus_taked:
+				estus.emit()
+				estus_taked = true
 		state.heavyatk:
 			diretional_animation("heavyatk_right","heavyatk_left")
+		state.damage:
+			diretional_animation("damage_right","damage_left")
+			velocity = knockback_vector
+			move_and_slide()
 
 func processing_free() -> void:
 	if Input.is_action_just_pressed("heal"):
@@ -82,8 +92,11 @@ func diretional_animation(animation1 : String, animation2 : String) -> void:
 
 #Signals Emiteds
 
-func take_damage(damage : int) -> void:
+func take_damage(damage : int, attacker_position : Vector2) -> void:
+	actual_state = state.damage
 	damage_taken.emit(damage)
+	var knockback_direction: Vector2 = (global_position - attacker_position).normalized()
+	knockback_vector = knockback_direction * knockback_force
 
 #Signals Reciveds
 
