@@ -18,3 +18,6 @@ position = Vector2(1204, 173)
 position = Vector2(1188, 524)
 
 [node name="Hud" parent="." unique_id=1522043168 instance=ExtResource("3_ph3nu")]
+
+[connection signal="damage_taken" from="Solair" to="Hud" method="_on_solair_damage_taken"]
+[connection signal="estus" from="Solair" to="Hud" method="_on_solair_estus"]

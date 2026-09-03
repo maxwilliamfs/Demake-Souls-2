@@ -12,6 +12,10 @@ var actual_diretional : diretional
 var vector_diretional : Vector2 = Vector2(0,0)
 var velocity_ : int = 200
 
+#Signals
+signal damage_taken(damage : int)
+signal estus
+
 #Instancias
 @onready var sprite_animation = $AnimatedSprite2D
 
@@ -22,6 +26,7 @@ func _physics_process(_delta: float) -> void:
 			processing_free()
 		state.heal:
 			diretional_animation("healing_right","healing_left")
+			estus.emit()
 		state.heavyatk:
 			diretional_animation("heavyatk_right","heavyatk_left")
 
@@ -73,6 +78,14 @@ func diretional_animation(animation1 : String, animation2 : String) -> void:
 			sprite_animation.play(animation1)
 	else:
 			sprite_animation.play(animation2)
+			
+
+#Signals Emiteds
+
+func take_damage(damage : int) -> void:
+	damage_taken.emit(damage)
+
+#Signals Reciveds
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	actual_state = state.free

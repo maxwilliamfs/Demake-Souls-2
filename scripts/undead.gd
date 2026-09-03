@@ -9,6 +9,7 @@ var actual_state : state = state.idle
 var actual_diretional : diretional
 
 #Atributos
+var damage : int = 30
 var player : CharacterBody2D
 var _velocity : int = 100
 var attack_trigger : bool = false
@@ -84,7 +85,8 @@ func _on_range_2d_body_entered(body: Node2D) -> void:
 			actual_state = state.attack
 
 func _on_hitbox_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.is_in_group("Player") and body.has_method("take_damage"):
+		body.take_damage(damage)
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	var anim_atual = sprite_animation.animation

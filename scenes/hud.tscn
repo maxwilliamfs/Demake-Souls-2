@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dxb43lp8i4pcw"]
 
+[ext_resource type="Script" uid="uid://cf8pjs4blxcws" path="res://scripts/hud.gd" id="1_047uy"]
 [ext_resource type="Texture2D" uid="uid://cyumqoav3qcst" path="res://sprites/Itens/moldura_vida.png" id="1_oo0fn"]
 [ext_resource type="Texture2D" uid="uid://cr8u0i7rbodoo" path="res://sprites/Itens/slots_Inventario_vazios.png" id="2_5ysmq"]
 [ext_resource type="Texture2D" uid="uid://dfnbr5c6dl4n3" path="res://sprites/Itens/barra_de_vida.png" id="2_6fi6k"]
@@ -58,6 +59,7 @@ animations = [{
 }]
 
 [node name="Hud" type="CanvasLayer" unique_id=1522043168]
+script = ExtResource("1_047uy")
 
 [node name="Control" type="Control" parent="." unique_id=381482040]
 layout_mode = 3
@@ -93,12 +95,13 @@ texture_progress = ExtResource("3_uo2fv")
 
 [node name="Invetory" type="TextureRect" parent="Control" unique_id=1905549157]
 layout_mode = 0
-offset_left = 17.999998
-offset_top = 473.99997
-offset_right = 82.0
-offset_bottom = 538.0
+offset_left = 39.0
+offset_top = 450.0
+offset_right = 103.0
+offset_bottom = 514.0
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("2_5ysmq")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/Invetory" unique_id=1967806288]
 position = Vector2(32.285713, 48.857147)
