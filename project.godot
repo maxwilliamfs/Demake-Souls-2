@@ -67,6 +67,16 @@ heavy_attack={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="Word"
+2d_render/layer_2="Player_Body"
+2d_render/layer_3="Enemy_Body"
+2d_render/layer_4="Player_Hitbox"
+2d_render/layer_5="Plater_HurtBox"
+2d_render/layer_6="Enemy_Hitbox"
+2d_render/layer_7="Enemy_HurtBox"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

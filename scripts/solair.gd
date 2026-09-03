@@ -15,6 +15,8 @@ var knockback_vector : Vector2
 var knockback_force : int = 400
 var estus_taked : bool = false
 var estus_qtd : int = 3
+var heavy_damage : int = 50
+var light_damage : int = 30
 
 #Signals
 signal damage_taken(damage : int)
@@ -24,6 +26,8 @@ signal estus
 @onready var sprite_animation = $AnimatedSprite2D
 @onready var pivot = $Pivot
 @onready var solair = $"."
+@onready var heavy_hitbox = $Pivot/HeavyHitBox2D
+@onready var light_hitbox = $Pivot/LightHitBox2D
 
 #Funcoes padroes
 func _physics_process(_delta: float) -> void:
@@ -39,6 +43,9 @@ func _physics_process(_delta: float) -> void:
 				estus_taked = true
 		state.heavyatk:
 			diretional_animation("heavyatk_right","heavyatk_left")
+			heavy_hitbox.show()
+		state.lightatk:
+			diretional_animation("lightatk_right","lightatk_left")
 		state.damage:
 			diretional_animation("damage_right","damage_left")
 			velocity = knockback_vector
@@ -55,9 +62,8 @@ func processing_free() -> void:
 		actual_state = state.heal
 	elif Input.is_action_just_pressed("heavy_attack"):
 		actual_state = state.heavyatk
-	##elif Input.is_action_just_pressed("light_attack"):
-		##actual_state = state.lightatk
-		##return
+	elif Input.is_action_just_pressed("light_attack"):
+		actual_state = state.lightatk
 	
 	#Movimento Horizontal
 	if Input.is_action_pressed("mov_right"):
@@ -114,8 +120,22 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		solair.hide()
 		set_physics_process(false)
 		return
+	if actual_state == state.heavyatk or actual_state == state.lightatk:
+		heavy_hitbox.hide()
+		light_hitbox.hide()
 	actual_state = state.free
 
 func _on_hud_death() -> void:
 	actual_state = state.death
 	diretional_animation("death_right","death_left")
+
+
+func _on_heavy_hit_box_2d_area_entered(area: Area2D) -> void:
+	var enemy = area.owner
+	if enemy.has_method("take_damage"):
+		enemy.take_damage(heavy_damage,global_position)
+
+func _on_light_hit_box_2d_area_entered(area: Area2D) -> void:
+	var enemy = area.owner
+	if enemy.has_method("take_damage"):
+		enemy.take_damage(light_damage,global_position)

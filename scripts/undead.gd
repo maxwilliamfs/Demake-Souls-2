@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #Enuns
-enum state {idle,pursue,attack,cooldown}
+enum state {idle,pursue,attack,cooldown,damage}
 enum diretional {left,right}
 
 #Declaracoes de Enuns
@@ -9,12 +9,15 @@ var actual_state : state = state.idle
 var actual_diretional : diretional
 
 #Atributos
-var damage : int = 1000
+var life : int = 100
+var damage : int = 30
 var player : CharacterBody2D
 var _velocity : int = 100
 var attack_trigger : bool = false
 var direction_trigger
 var player_in_range : bool = false
+var knockback_vector : Vector2
+var knockback_force : int = 400
 
 #Pre Processamento
 @export var initial_diretional : diretional
@@ -42,6 +45,15 @@ func _physics_process(delta: float) -> void:
 		state.cooldown:
 			velocity = Vector2.ZERO
 			move_and_slide()
+		state.damage:
+			diretional_animation("damage_right","damage_left")
+			velocity = knockback_vector
+			move_and_slide()
+
+func take_damage(damage : int,attack_position : Vector2) -> void:
+	life -= damage
+	knockback_vector = (attack_position - global_position) * knockback_force
+	actual_state = state.damage
 
 func attack() -> void:
 	if !attack_trigger:

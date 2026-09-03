@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://beb0bmy31vfi2"]
 
 [ext_resource type="PackedScene" uid="uid://bvo1fybk1mpri" path="res://scenes/characters/pursuer_teste.tscn" id="1_kta4m"]
-[ext_resource type="PackedScene" uid="uid://c8wbba43cdtj4" path="res://scripts/Undead.tscn" id="2_2gqm3"]
+[ext_resource type="PackedScene" uid="uid://c8wbba43cdtj4" path="res://scenes/characters/Undead.tscn" id="2_2gqm3"]
 
 [node name="Node2D" type="Node2D" unique_id=1819380369]
 

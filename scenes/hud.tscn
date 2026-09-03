@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dqjt3ug3412c8" path="res://sprites/Itens/Estus_sprite_3.png" id="5_uo2fv"]
 [ext_resource type="Texture2D" uid="uid://bb84gg871v5gd" path="res://sprites/Itens/almas_hud_vazio.png" id="7_5pdws"]
 [ext_resource type="FontFile" uid="uid://crs5ghsfookk1" path="res://fonts/OptimusPrincepsSemiBold.ttf" id="8_hd3ao"]
-[ext_resource type="FontFile" uid="uid://cb15ddmoqn5vh" path="res://fonts/OptimusPrinceps.ttf" id="9_0i1j5"]
 [ext_resource type="AudioStream" uid="uid://cqrsi718qf48b" path="res://soundeffects/died_effect.mp3" id="10_mphia"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_047uy"]
@@ -66,10 +65,6 @@ animations = [{
 font = ExtResource("8_hd3ao")
 font_size = 150
 font_color = Color(0.45490196, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_0ucnw"]
-font = ExtResource("9_0i1j5")
-font_size = 80
 
 [node name="Hud" type="CanvasLayer" unique_id=1522043168]
 script = ExtResource("1_047uy")
@@ -139,33 +134,24 @@ offset_bottom = 40.0
 
 [node name="Death" type="ColorRect" parent="Death" unique_id=2029182950]
 layout_mode = 0
-offset_left = -16.0
-offset_top = -10.0
-offset_right = 1287.0
-offset_bottom = 739.0
+offset_left = -14.0
+offset_top = 272.0
+offset_right = 1289.0
+offset_bottom = 467.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label_Death" type="Label" parent="Death" unique_id=1698655429]
 layout_mode = 0
-offset_left = 57.0
-offset_top = 152.0
-offset_right = 1188.0
-offset_bottom = 316.0
-text = "VOCE MORREU"
+offset_left = 59.0
+offset_top = 286.0
+offset_right = 1190.0
+offset_bottom = 450.0
+text = "     YOU DIED"
 label_settings = SubResource("LabelSettings_kejrx")
 
 [node name="DeathTimer" type="Timer" parent="Death" unique_id=2046022908]
 wait_time = 2.0
 one_shot = true
-
-[node name="Label" type="Label" parent="Death" unique_id=1543004121]
-layout_mode = 0
-offset_left = 359.0
-offset_top = 498.0
-offset_right = 883.0
-offset_bottom = 583.0
-text = "RECOMECAR"
-label_settings = SubResource("LabelSettings_0ucnw")
 
 [node name="Death_audio" type="AudioStreamPlayer2D" parent="Death" unique_id=1511128654]
 stream = ExtResource("10_mphia")
