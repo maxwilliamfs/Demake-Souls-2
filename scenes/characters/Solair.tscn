@@ -594,7 +594,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"heavyatk_left",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -641,7 +641,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"heavyatk_right",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -831,7 +831,12 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pkw0b"]
-height = 58.0
+radius = 4.666666
+height = 20.000004
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kejrx"]
+radius = 9.333334
+height = 54.666668
 
 [node name="Solair" type="CharacterBody2D" unique_id=252625353 groups=["Player"]]
 scale = Vector2(1.5, 1.5)
@@ -839,12 +844,19 @@ script = ExtResource("1_72w1d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410345407]
 sprite_frames = SubResource("SpriteFrames_kejrx")
-animation = &"heavyatk_right"
+animation = &"heavyatk_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2141661597]
-position = Vector2(-2, 5)
+position = Vector2(3.3333333, 25.333334)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pkw0b")
 
 [node name="Pivot" type="Node2D" parent="." unique_id=1024154334]
+
+[node name="HurtBox2D" type="Area2D" parent="Pivot" unique_id=1622682737]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/HurtBox2D" unique_id=1100879167]
+position = Vector2(2.6666667, 3.3333335)
+shape = SubResource("CapsuleShape2D_kejrx")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

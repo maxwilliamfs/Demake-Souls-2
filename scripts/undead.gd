@@ -26,6 +26,8 @@ var player_in_range : bool = false
 
 func _ready() -> void:
 	actual_diretional = initial_diretional
+	cooldown_timer.one_shot = true
+	cooldown_timer.wait_time = 2
 	if initial_diretional == diretional.right:
 		combat_pivot.scale.x = -1
 	diretional_animation("idle_right","idle_left")
@@ -96,6 +98,8 @@ func _on_range_2d_body_exited(body: Node2D) -> void:
 		player_in_range = false
 
 func _on_cooldown_timer_timeout() -> void:
+	if actual_state != state.cooldown:
+		return
 	attack_trigger = false
 	var player_still_in_area = false
 	for corpse in range_2d.get_overlapping_bodies():
