@@ -1442,6 +1442,7 @@ collision_mask = 5
 script = ExtResource("1_72w1d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410345407]
+z_index = 2
 sprite_frames = SubResource("SpriteFrames_kejrx")
 animation = &"idle_left"
 

@@ -1,13 +1,7 @@
-res://scenes/characters/Solair.tscn
 res://scenes/characters/Undead.tscn
-res://scripts/solair.gd
 res://scripts/undead.gd
-res://scenes/soul.tscn
-res://scenes/hud.tscn
-res://scripts/soul.gd
-res://scripts/hud.gd
+res://scenes/characters/Solair.tscn
+res://scripts/solair.gd
 res://scenes/tutorial.tscn
 res://scenes/characters/oldlady.tscn
-res://scripts/oldlady.gd
 res://scenes/characters/pursuer.tscn
-res://scripts/pursuer.gd

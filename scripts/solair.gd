@@ -122,9 +122,8 @@ func take_damage(damage : int, attacker_position : Vector2) -> void:
 #Signals Reciveds
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if actual_state == state.death:
-		solair.hide()
 		set_physics_process(false)
-		return
+		queue_free()
 	actual_state = state.free
 
 func _on_hud_death() -> void:

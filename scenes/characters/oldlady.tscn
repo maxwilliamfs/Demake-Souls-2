@@ -489,6 +489,7 @@ scale = Vector2(1.5, 1.5)
 script = ExtResource("1_lq6px")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1171560502]
+z_index = 2
 sprite_frames = SubResource("SpriteFrames_kejrx")
 animation = &"estus_right"
 

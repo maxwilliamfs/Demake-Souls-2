@@ -1262,6 +1262,7 @@ collision_mask = 3
 script = ExtResource("1_s87lk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=23282987]
+z_index = 2
 sprite_frames = SubResource("SpriteFrames_40bpm")
 animation = &"idle_left"
 
@@ -1297,6 +1298,7 @@ polygon = PackedVector2Array(-3.3333335, -68.66667, -48, -64.66667, -81.333336, 
 [node name="HurtBox2D" type="Area2D" parent="Pivot" unique_id=597662941]
 collision_layer = 64
 collision_mask = 8
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/HurtBox2D" unique_id=920540579]
 position = Vector2(0, 2.6666667)

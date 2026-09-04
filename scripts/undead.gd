@@ -44,19 +44,22 @@ func _physics_process(delta: float) -> void:
 		actual_state = state.death
 	match actual_state:
 		state.pursue:
-			hitbox.monitoring = true
+			hitbox.monitoring = false
 			pursue()
 		state.attack:
+			hitbox.monitoring = true
 			attack()
 		state.cooldown:
 			hitbox.monitoring = false
 			velocity = Vector2.ZERO
 			move_and_slide()
 		state.damage:
+			hitbox.monitoring = false
 			diretional_animation("damage_right","damage_left")
 			velocity = knockback_vector
 			move_and_slide()
 		state.death:
+			hitbox.monitoring = false
 			diretional_animation("death_right","death_left")
 			velocity = Vector2.ZERO
 
