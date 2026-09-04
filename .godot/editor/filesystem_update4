@@ -7,3 +7,7 @@ res://scenes/hud.tscn
 res://scripts/soul.gd
 res://scripts/hud.gd
 res://scenes/tutorial.tscn
+res://scenes/characters/oldlady.tscn
+res://scripts/oldlady.gd
+res://scenes/characters/pursuer.tscn
+res://scripts/pursuer.gd

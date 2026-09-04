@@ -3,11 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://djp75rh3ixcco" path="res://scenes/characters/Solair.tscn" id="1_c13y7"]
 [ext_resource type="PackedScene" uid="uid://c8wbba43cdtj4" path="res://scenes/characters/Undead.tscn" id="2_8ho6b"]
 [ext_resource type="PackedScene" uid="uid://dxb43lp8i4pcw" path="res://scenes/hud.tscn" id="3_ph3nu"]
+[ext_resource type="PackedScene" uid="uid://gdoprtwc6wul" path="res://scenes/characters/oldlady.tscn" id="4_4kmhl"]
+[ext_resource type="PackedScene" uid="uid://dro8a465hnib7" path="res://scenes/characters/pursuer.tscn" id="5_cq4me"]
 
 [node name="Tutorial" type="Node2D" unique_id=20960459]
 
 [node name="Solair" parent="." unique_id=252625353 instance=ExtResource("1_c13y7")]
-position = Vector2(87, 363)
+position = Vector2(418.99997, 211.00005)
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Solair" unique_id=1433927966]
 
@@ -18,6 +21,12 @@ position = Vector2(1204, 173)
 position = Vector2(1188, 524)
 
 [node name="Hud" parent="." unique_id=1522043168 instance=ExtResource("3_ph3nu")]
+
+[node name="Oldlady" parent="." unique_id=867178774 instance=ExtResource("4_4kmhl")]
+position = Vector2(96, 204)
+
+[node name="Pursuer" parent="." unique_id=609474206 instance=ExtResource("5_cq4me")]
+position = Vector2(90, 395)
 
 [connection signal="damage_taken" from="Solair" to="Hud" method="_on_solair_damage_taken"]
 [connection signal="estus" from="Solair" to="Hud" method="_on_solair_estus"]
