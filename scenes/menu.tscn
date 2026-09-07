@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://chu53akuu3fxj"]
+
+[ext_resource type="Script" uid="uid://dmittskfqm1nt" path="res://scenes/menu.gd" id="1_mhnvy"]
+[ext_resource type="FontFile" uid="uid://crs5ghsfookk1" path="res://fonts/OptimusPrincepsSemiBold.ttf" id="1_vjb58"]
+[ext_resource type="FontFile" uid="uid://cb15ddmoqn5vh" path="res://fonts/OptimusPrinceps.ttf" id="2_con2f"]
+[ext_resource type="LabelSettings" uid="uid://bn337vajrgxp0" path="res://fonts/tres/little_title.tres" id="3_con2f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kejrx"]
+font = ExtResource("1_vjb58")
+font_size = 135
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ucnw"]
+font = ExtResource("2_con2f")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_br0en"]
+font = ExtResource("2_con2f")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_mnbdc"]
+font = ExtResource("2_con2f")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_skl48"]
+font = ExtResource("2_con2f")
+font_size = 30
+
+[node name="Menu" type="Control" unique_id=1850004001]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mhnvy")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=245983795]
+layout_mode = 0
+offset_left = -43.0
+offset_top = -53.0
+offset_right = 1385.0
+offset_bottom = 781.0
+color = Color(0, 0, 0, 1)
+
+[node name="Initial" type="Control" parent="." unique_id=1197525503]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Initial" unique_id=1548033666]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 231.0
+offset_right = 1354.0
+offset_bottom = 395.0
+text = "DEMAKE SOULS II"
+label_settings = SubResource("LabelSettings_kejrx")
+
+[node name="Label2" type="Label" parent="Initial" unique_id=1932925831]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 368.0
+offset_right = 1955.0
+offset_bottom = 453.0
+text = "SCHOLAR OF THE COMPUTIONAL GRAPHYCS"
+label_settings = SubResource("LabelSettings_0ucnw")
+
+[node name="Label3" type="Label" parent="Initial" unique_id=1081638497]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 557.0
+offset_right = 757.0
+offset_bottom = 589.0
+text = "Aperte o botao Start"
+label_settings = SubResource("LabelSettings_br0en")
+
+[node name="Start" type="Control" parent="." unique_id=339952926]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="new_game" type="Label" parent="Start" unique_id=1961138048]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 495.0
+offset_right = 730.0
+offset_bottom = 574.0
+text = "novo jogo
+"
+label_settings = SubResource("LabelSettings_mnbdc")
+
+[node name="continue" type="Label" parent="Start" unique_id=1903481376]
+layout_mode = 0
+offset_left = 557.0
+offset_top = 534.0
+offset_right = 733.0
+offset_bottom = 572.0
+text = "continuar"
+label_settings = ExtResource("3_con2f")
+
+[node name="exit" type="Label" parent="Start" unique_id=2065460060]
+layout_mode = 0
+offset_left = 604.0
+offset_top = 573.0
+offset_right = 656.0
+offset_bottom = 605.0
+text = "sair"
+label_settings = SubResource("LabelSettings_skl48")

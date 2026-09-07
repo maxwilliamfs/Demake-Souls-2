@@ -5,14 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://dxb43lp8i4pcw" path="res://scenes/hud.tscn" id="3_ph3nu"]
 [ext_resource type="PackedScene" uid="uid://gdoprtwc6wul" path="res://scenes/characters/oldlady.tscn" id="4_4kmhl"]
 [ext_resource type="PackedScene" uid="uid://dro8a465hnib7" path="res://scenes/characters/pursuer.tscn" id="5_cq4me"]
+[ext_resource type="PackedScene" uid="uid://b3kscirt65qko" path="res://scenes/camera.tscn" id="6_6yjpi"]
 
 [node name="Tutorial" type="Node2D" unique_id=20960459]
 
 [node name="Solair" parent="." unique_id=252625353 instance=ExtResource("1_c13y7")]
 position = Vector2(418.99997, 211.00005)
 metadata/_edit_group_ = true
-
-[node name="Camera2D" type="Camera2D" parent="Solair" unique_id=1433927966]
 
 [node name="Undead" parent="." unique_id=1005191574 instance=ExtResource("2_8ho6b")]
 position = Vector2(1204, 173)
@@ -27,6 +26,10 @@ position = Vector2(96, 204)
 
 [node name="Pursuer" parent="." unique_id=609474206 instance=ExtResource("5_cq4me")]
 position = Vector2(90, 395)
+
+[node name="Camera" parent="." unique_id=263345573 node_paths=PackedStringArray("player_one", "player_two") instance=ExtResource("6_6yjpi")]
+player_one = NodePath("../Solair")
+player_two = NodePath("")
 
 [connection signal="damage_taken" from="Solair" to="Hud" method="_on_solair_damage_taken"]
 [connection signal="estus" from="Solair" to="Hud" method="_on_solair_estus"]

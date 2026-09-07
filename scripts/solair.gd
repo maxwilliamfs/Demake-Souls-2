@@ -123,7 +123,8 @@ func take_damage(damage : int, attacker_position : Vector2) -> void:
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if actual_state == state.death:
 		set_physics_process(false)
-		queue_free()
+		heavy_hitbox.monitoring = false
+		light_hitbox.monitoring = false
 	actual_state = state.free
 
 func _on_hud_death() -> void:

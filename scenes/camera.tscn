@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b3kscirt65qko"]
+
+[ext_resource type="Script" uid="uid://cprh4y4iygq6l" path="res://scenes/camera.gd" id="1_cvpoc"]
+
+[node name="Camera" type="Camera2D" unique_id=263345573]
+script = ExtResource("1_cvpoc")
