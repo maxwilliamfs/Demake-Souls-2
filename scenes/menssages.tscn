@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dcgdbbqo50ga"]
+
+[ext_resource type="Script" uid="uid://w0hhuk8mldhr" path="res://scripts/menssages.gd" id="1_37sqb"]
+[ext_resource type="Texture2D" uid="uid://cv0soyuoafwuu" path="res://images/Perseguidor derrotado.png" id="1_h8jx5"]
+
+[node name="Menssages" type="CanvasLayer" unique_id=99543716]
+script = ExtResource("1_37sqb")
+
+[node name="Pursuer_defeated" type="Sprite2D" parent="." unique_id=330203534]
+visible = false
+position = Vector2(646, 196)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_h8jx5")

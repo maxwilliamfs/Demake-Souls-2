@@ -1,6 +1,6 @@
 Sprite2D
-Control
 CanvasLayer
+Control
 AudioStreamPlayer
 CollisionShape2D
 Timer

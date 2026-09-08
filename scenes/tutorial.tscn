@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dro8a465hnib7" path="res://scenes/characters/pursuer.tscn" id="6_gbqnl"]
 [ext_resource type="PackedScene" uid="uid://gjegy0bu5k1x" path="res://scenes/death.tscn" id="7_gbqnl"]
 [ext_resource type="PackedScene" uid="uid://bkwabm41lb5fe" path="res://scenes/dialogue.tscn" id="8_ckvwl"]
+[ext_resource type="PackedScene" uid="uid://dcgdbbqo50ga" path="res://scenes/menssages.tscn" id="9_nlqja"]
 
 [node name="Tutorial" type="Node2D" unique_id=20960459]
 
@@ -35,6 +36,8 @@ player_one = NodePath("../Solair")
 
 [node name="Dialogue" parent="." unique_id=1821632590 instance=ExtResource("8_ckvwl")]
 
+[node name="Menssages" parent="." unique_id=99543716 instance=ExtResource("9_nlqja")]
+
 [connection signal="damage_taken" from="Solair" to="Hud" method="_on_solair_damage_taken"]
 [connection signal="estus" from="Solair" to="Hud" method="_on_solair_estus"]
 [connection signal="roll_s" from="Solair" to="Hud" method="_on_solair_roll_s"]
@@ -42,6 +45,7 @@ player_one = NodePath("../Solair")
 [connection signal="death" from="Hud" to="Solair" method="_on_hud_death"]
 [connection signal="death" from="Hud" to="Death" method="_on_hud_death"]
 [connection signal="talk" from="Oldlady" to="Dialogue" method="_on_oldlady_talk"]
+[connection signal="defeated" from="Pursuer" to="Menssages" method="_on_pursuer_defeated"]
 [connection signal="cancel" from="Dialogue" to="Oldlady" method="_on_dialogue_cancel"]
 [connection signal="change_animation" from="Dialogue" to="Oldlady" method="_on_dialogue_change_animation"]
 [connection signal="estus_unlocked" from="Dialogue" to="Solair" method="_on_dialogue_estus_unlocked"]

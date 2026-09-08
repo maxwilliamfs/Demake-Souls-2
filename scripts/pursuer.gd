@@ -24,6 +24,9 @@ var player_in_range : bool = false
 const SOUL_SCENE = preload("res://scenes/soul.tscn")
 @export var initial_diretional : diretional
 
+#Signals
+signal defeated
+
 #Instacias
 @onready var sprite_animation = $AnimatedSprite2D
 @onready var combat_pivot = $Pivot
@@ -123,6 +126,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		queue_free()
 
 func drop_soul() -> void:
+	defeated.emit()
 	var soul_instance = SOUL_SCENE.instantiate()
 	soul_instance.souls_value = souls_dropped
 	soul_instance.global_position = global_position

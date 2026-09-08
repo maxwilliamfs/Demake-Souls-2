@@ -1,9 +1,4 @@
+res://scripts/menssages.gd
 res://scenes/tutorial.tscn
-res://scripts/oldlady.gd
-res://scripts/dialogue.gd
-res://scenes/characters/oldlady.tscn
-res://scenes/dialogue.tscn
-res://scripts/solair.gd
-res://scripts/hud.gd
-res://scenes/hud.tscn
-res://scenes/characters/Solair.tscn
+res://scenes/menu.gd
+res://scripts/pursuer.gd

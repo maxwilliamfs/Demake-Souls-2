@@ -41,7 +41,6 @@ func _process(_delta: float) -> void:
 			new_game = false
 			
 		if Input.is_action_just_pressed("mov_up") and !new_game:
-			print("Indo para Novo Jogo")
 			new_game_l.self_modulate = Color("#ffffff")     
 			exit_l.self_modulate = Color("#515151") 
 			new_game = true
