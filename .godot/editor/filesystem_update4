@@ -2,3 +2,6 @@ res://scripts/menssages.gd
 res://scenes/tutorial.tscn
 res://scenes/menu.gd
 res://scripts/pursuer.gd
+res://scenes/characters/pursuer.tscn
+res://scenes/menssages.tscn
+res://scenes/pursuer_hud.tscn
