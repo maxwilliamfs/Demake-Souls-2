@@ -4,7 +4,7 @@ enum state {idle,pursue,attack,cooldown,death}
 enum diretional {left,right}
 
 #Declaracoes de Enuns
-var actual_state : state = state.pursue
+var actual_state : state = state.idle
 var actual_diretional : diretional
 
 #Atributos

@@ -32,15 +32,12 @@ func _process(delta: float) -> void:
 		pause_time_stamina -= delta 
 	else:
 		if stamina < stamina_bar.max_value:
-			stamina += 12.0 * delta 
+			stamina += 9.0 * delta 
 			stamina_bar.value = stamina 
 	souls_label.text = str(souls)
 	if life <= 0 and !is_dead:
 		death.emit()
-		death_timer.start()
 		is_dead = true
-		death_audio.play()
-	
 	if is_dead:
 		if Input.is_action_pressed("heal"):
 			get_tree().reload_current_scene()
@@ -76,13 +73,6 @@ func _on_solair_damage_taken(damage: int) -> void:
 
 func _on_solair_estus() -> void:
 	use_estus()
-
-
-func _on_death_timer_timeout() -> void:
-	death_scene.show()
-	death_scene.modulate.a = 0.0 
-	var tween = create_tween()
-	tween.tween_property(death_scene, "modulate:a", 1.0, 2.5)
 
 func _on_solair_souls(value: int) -> void:
 	souls += value

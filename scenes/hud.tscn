@@ -8,8 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dqjt3ug3412c8" path="res://sprites/Itens/Estus_sprite_3.png" id="5_uo2fv"]
 [ext_resource type="Texture2D" uid="uid://bb84gg871v5gd" path="res://sprites/Itens/almas_hud_vazio.png" id="7_5pdws"]
 [ext_resource type="FontFile" uid="uid://crs5ghsfookk1" path="res://fonts/OptimusPrincepsSemiBold.ttf" id="8_hd3ao"]
-[ext_resource type="Texture2D" uid="uid://p6g2ihgvd0u3" path="res://images/YOU DIED.png" id="9_mphia"]
-[ext_resource type="AudioStream" uid="uid://cqrsi718qf48b" path="res://soundeffects/died_effect.mp3" id="10_mphia"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_047uy"]
 atlas = ExtResource("5_uo2fv")
@@ -134,24 +132,3 @@ offset_bottom = 683.0
 text = "0"
 label_settings = SubResource("LabelSettings_0ucnw")
 horizontal_alignment = 2
-
-[node name="Death" type="Control" parent="." unique_id=1345788045]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Death" unique_id=2098837113]
-position = Vector2(634, 118)
-texture = ExtResource("9_mphia")
-
-[node name="DeathTimer" type="Timer" parent="Death" unique_id=2046022908]
-wait_time = 2.0
-one_shot = true
-
-[node name="Death_audio" type="AudioStreamPlayer2D" parent="Death" unique_id=1511128654]
-stream = ExtResource("10_mphia")
-volume_db = 15.0
-
-[connection signal="timeout" from="Death/DeathTimer" to="." method="_on_death_timer_timeout"]

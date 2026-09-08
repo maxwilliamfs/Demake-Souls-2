@@ -1,3 +1,23 @@
 [gd_scene format=3 uid="uid://gjegy0bu5k1x"]
 
-[node name="Death" type="CanvasLayer" unique_id=250417362]
+[ext_resource type="Script" uid="uid://jhp316rkejl1" path="res://scripts/death.gd" id="1_tjai8"]
+[ext_resource type="Texture2D" uid="uid://p6g2ihgvd0u3" path="res://images/YOU DIED.png" id="1_w8wr1"]
+[ext_resource type="AudioStream" uid="uid://cqrsi718qf48b" path="res://soundeffects/died_effect.mp3" id="2_tjai8"]
+
+[node name="Death" type="CanvasLayer" unique_id=919273281]
+script = ExtResource("1_tjai8")
+
+[node name="Death_label" type="Sprite2D" parent="." unique_id=577909958]
+visible = false
+position = Vector2(634, 118)
+texture = ExtResource("1_w8wr1")
+
+[node name="DeathTimer" type="Timer" parent="." unique_id=225082240]
+wait_time = 2.0
+one_shot = true
+
+[node name="Death_audio" type="AudioStreamPlayer2D" parent="." unique_id=733039589]
+stream = ExtResource("2_tjai8")
+volume_db = 15.0
+
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

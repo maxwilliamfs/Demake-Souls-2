@@ -1,5 +1,6 @@
-CanvasLayer
 Sprite2D
+CanvasLayer
+AudioStreamPlayer
 Control
 CollisionShape2D
 Timer
@@ -11,4 +12,3 @@ Node2D
 AnimatedSprite2D
 CharacterBody2D
 StaticBody2D
-AudioStreamPlayer2D

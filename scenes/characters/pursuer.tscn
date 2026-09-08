@@ -890,7 +890,7 @@ script = ExtResource("1_w4b87")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1299474090]
 z_index = 2
 sprite_frames = SubResource("SpriteFrames_kejrx")
-animation = &"idle_left"
+animation = &"attack_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1470106725]
 position = Vector2(0, 42)

@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 		pause_stamina_timer -= delta
 	else:
 		if stamina < 100:
-			stamina += 12.0 * delta 
+			stamina += 9.0 * delta 
 	vector_diretional.normalized()
 	match actual_state:
 		state.free:
