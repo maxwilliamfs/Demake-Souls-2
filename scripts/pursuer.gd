@@ -18,11 +18,12 @@ var _velocity : int = 150
 var attack_trigger : bool = false
 var direction_trigger
 var attack_num : int
+var stop_force : float = 0.1
 var souls_dropped : int = 10000
 var attack_finisheds : int = 0
 var player_in_range : bool = false
 var actual_attack : int
-var attack_dash : int = 550
+var attack_dash : int = 800
 
 #Pre Processamento
 const SOUL_SCENE = preload("res://scenes/soul.tscn")
@@ -46,7 +47,7 @@ func _ready() -> void:
 	player = players[0]
 	actual_diretional = initial_diretional
 	cooldown_timer.one_shot = true
-	cooldown_timer.wait_time = 3
+	cooldown_timer.wait_time = 4
 	if initial_diretional == diretional.right:
 		combat_pivot.scale.x = -1
 	diretional_animation("idle_right","idle_left")
@@ -104,7 +105,7 @@ func attack1() -> void:
 		attack_trigger = true
 		velocity = direction_trigger * attack_dash
 		attack_finisheds -= 1
-	velocity = velocity.lerp(Vector2.ZERO, 0.03)
+	velocity = velocity.lerp(Vector2.ZERO,stop_force)
 	move_and_slide()
 
 func attack2() -> void:
@@ -119,7 +120,7 @@ func attack2() -> void:
 		attack_finisheds -= 1
 		velocity = direction_trigger * attack_dash
 	
-	velocity = velocity.lerp(Vector2.ZERO, 0.03)
+	velocity = velocity.lerp(Vector2.ZERO, stop_force)
 	move_and_slide()
 
 func attack3() -> void:
@@ -136,7 +137,7 @@ func attack3() -> void:
 		attack_finisheds -= 1
 		velocity = direction_trigger * attack_dash
 	
-	velocity = velocity.lerp(Vector2.ZERO, 0.03)
+	velocity = velocity.lerp(Vector2.ZERO, stop_force)
 	move_and_slide()
 
 func actualize_directio(vector : Vector2) -> void:

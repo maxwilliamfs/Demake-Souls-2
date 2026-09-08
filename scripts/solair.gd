@@ -18,7 +18,7 @@ var estus_qtd : int = 0
 var heavy_damage : int = 50
 var light_damage : int = 30
 var pause_stamina_timer : float = 0
-var roll_force : int = 400
+var roll_force : int = 600
 var roll_vector : Vector2
 var roll : bool = false
 var stamina : float = 100
@@ -64,7 +64,7 @@ func _physics_process(delta: float) -> void:
 			light_hitbox.show()
 		state.damage:
 			diretional_animation("damage_right","damage_left")
-			velocity = knockback_vector
+			velocity = velocity.lerp(Vector2.ZERO, 0.1) 
 			move_and_slide()
 		state.death:
 			velocity = Vector2.ZERO
@@ -74,17 +74,17 @@ func _physics_process(delta: float) -> void:
 			if !roll:
 				diretional_animation("roll_right","roll_left")
 				roll = true
-			if vector_diretional == Vector2.ZERO:
-				if actual_diretional == diretional.left:
-					vector_diretional.x = -1
-				else:
-					vector_diretional.x = 1
-			velocity = vector_diretional * roll_force
+				if vector_diretional == Vector2.ZERO:
+					if actual_diretional == diretional.left:
+						vector_diretional.x = -1
+					else:
+						vector_diretional.x = 1
+				velocity = vector_diretional * roll_force
 			var actual_force = velocity.length()
 			if actual_force > (roll_force * 1/5): 
-				velocity = velocity.lerp(Vector2.ZERO, 0.3)
+				velocity = velocity.lerp(Vector2.ZERO, 0.05)
 			else:
-				velocity = velocity.lerp(Vector2.ZERO, 0.8)
+				velocity = velocity.lerp(Vector2.ZERO, 0.1)
 			move_and_slide()
 		state.dialogue:
 			diretional_animation("idle_right","idle_left")
@@ -166,6 +166,8 @@ func take_damage(damage : int, attacker_position : Vector2) -> void:
 	actual_state = state.damage
 	var knockback_direction: Vector2 = (global_position - attacker_position).normalized()
 	knockback_vector = knockback_direction * knockback_force
+	velocity = knockback_direction * knockback_force 
+	
 	damage_taken.emit(damage)
 
 #Signals Reciveds
