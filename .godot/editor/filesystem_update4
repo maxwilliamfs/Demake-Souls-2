@@ -1,0 +1,5 @@
+res://scenes/characters/pursuer.tscn
+res://scripts/solair.gd
+res://scenes/tutorial.tscn
+res://scripts/pursuer.gd
+res://scripts/hud.gd

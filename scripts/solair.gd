@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #Enuns
-enum state {free,heal,heavyatk,lightatk,damage,death}
+enum state {free,heal,heavyatk,lightatk,damage,death,roll}
 enum diretional {left,right}
 
 #Declaraçoes de Enuns
@@ -14,13 +14,19 @@ var velocity_ : int = 200
 var knockback_vector : Vector2
 var knockback_force : int = 300
 var estus_taked : bool = false
-var estus_qtd : int = 0
+var estus_qtd : int = 3
 var heavy_damage : int = 50
 var light_damage : int = 30
+var pause_stamina_timer : float = 0
+var roll_force : int = 500
+var roll_vector : Vector2
+var roll : bool = false
+var stamina : float = 100
 
 #Signals
 signal damage_taken(damage : int)
 signal estus
+signal roll_s
 signal souls(value : int)
 
 #Instancias
@@ -31,7 +37,13 @@ signal souls(value : int)
 @onready var light_hitbox = $Pivot/LightHitBox2D
 
 #Funcoes padroes
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
+	if pause_stamina_timer > 0:
+		pause_stamina_timer -= delta
+	else:
+		if stamina < 100:
+			stamina += 12.0 * delta 
+	vector_diretional.normalized()
 	match actual_state:
 		state.free:
 			estus_taked = false
@@ -56,6 +68,22 @@ func _physics_process(_delta: float) -> void:
 			velocity = Vector2.ZERO
 			move_and_slide()
 			pivot.hide()
+		state.roll:
+			if !roll:
+				diretional_animation("roll_right","roll_left")
+				roll = true
+			if vector_diretional == Vector2.ZERO:
+				if actual_diretional == diretional.left:
+					vector_diretional.x = -1
+				else:
+					vector_diretional.x = 1
+			velocity = vector_diretional * roll_force
+			var actual_force = velocity.length()
+			if actual_force > (roll_force * 1/5): 
+				velocity = velocity.lerp(Vector2.ZERO, 0.3)
+			else:
+				velocity = velocity.lerp(Vector2.ZERO, 0.8)
+			move_and_slide()
 
 func processing_free() -> void:
 	if Input.is_action_just_pressed("heal"):
@@ -66,6 +94,12 @@ func processing_free() -> void:
 		actual_state = state.heavyatk
 	elif Input.is_action_just_pressed("light_attack"):
 		actual_state = state.lightatk
+	elif Input.is_action_just_pressed("roll"):
+		if stamina >= 40:
+			stamina -= 40
+			pause_stamina_timer = 1.0
+			actual_state = state.roll
+			roll_s.emit()
 	
 	#Movimento Horizontal
 	if Input.is_action_pressed("mov_right"):
@@ -125,6 +159,8 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		set_physics_process(false)
 		heavy_hitbox.monitoring = false
 		light_hitbox.monitoring = false
+	if actual_state == state.roll:
+		roll = false
 	actual_state = state.free
 
 func _on_hud_death() -> void:

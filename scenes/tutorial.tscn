@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dxb43lp8i4pcw" path="res://scenes/hud.tscn" id="3_ph3nu"]
 [ext_resource type="PackedScene" uid="uid://gdoprtwc6wul" path="res://scenes/characters/oldlady.tscn" id="4_4kmhl"]
 [ext_resource type="PackedScene" uid="uid://b3kscirt65qko" path="res://scenes/camera.tscn" id="6_6yjpi"]
+[ext_resource type="PackedScene" uid="uid://dro8a465hnib7" path="res://scenes/characters/pursuer.tscn" id="6_gbqnl"]
 
 [node name="Tutorial" type="Node2D" unique_id=20960459]
 
@@ -26,7 +27,10 @@ position = Vector2(96, 204)
 [node name="Camera" parent="." unique_id=263345573 node_paths=PackedStringArray("player_one") instance=ExtResource("6_6yjpi")]
 player_one = NodePath("../Solair")
 
+[node name="Pursuer" parent="." unique_id=609474206 instance=ExtResource("6_gbqnl")]
+
 [connection signal="damage_taken" from="Solair" to="Hud" method="_on_solair_damage_taken"]
 [connection signal="estus" from="Solair" to="Hud" method="_on_solair_estus"]
+[connection signal="roll_s" from="Solair" to="Hud" method="_on_solair_roll_s"]
 [connection signal="souls" from="Solair" to="Hud" method="_on_solair_souls"]
 [connection signal="death" from="Hud" to="Solair" method="_on_hud_death"]

@@ -5,9 +5,14 @@ var estus : int = 3
 var estus_health : int = 40
 var tween: Tween
 var life : int = 100
+var stamina : float = 100
+var life_tween: Tween
+var stamina_tween: Tween
 var is_dead : bool = false
 var souls : int = 0
-var estus_unlock : bool = false
+var roll_stamina : int = 40
+var estus_unlock : bool = true
+var pause_time_stamina : float = 0
 
 #Instancias
 @onready var life_bar = $Control/Base_Life/Life
@@ -22,7 +27,13 @@ var estus_unlock : bool = false
 signal death
 
 #Funcoes Proprias
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	if pause_time_stamina > 0:
+		pause_time_stamina -= delta 
+	else:
+		if stamina < stamina_bar.max_value:
+			stamina += 12.0 * delta 
+			stamina_bar.value = stamina 
 	souls_label.text = str(souls)
 	if life <= 0 and !is_dead:
 		death.emit()
@@ -75,3 +86,13 @@ func _on_death_timer_timeout() -> void:
 
 func _on_solair_souls(value: int) -> void:
 	souls += value
+
+func _on_solair_roll_s() -> void:
+	if stamina < roll_stamina:
+		return
+	if stamina_tween:
+		stamina_tween.kill()
+	stamina_tween = create_tween()
+	stamina = clampf(stamina - roll_stamina, 0, stamina_bar.max_value) 
+	pause_time_stamina = 1.0
+	stamina_tween.tween_property(stamina_bar, "value", stamina, pause_time_stamina).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
