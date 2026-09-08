@@ -134,12 +134,12 @@ func _on_hud_death() -> void:
 func _on_heavy_hit_box_2d_area_entered(area: Area2D) -> void:
 	var enemy = area.owner
 	if enemy.has_method("take_damage"):
-		enemy.take_damage(heavy_damage,global_position)
+		enemy.take_damage(heavy_damage, global_position)
 
 func _on_light_hit_box_2d_area_entered(area: Area2D) -> void:
 	var enemy = area.owner
 	if enemy.has_method("take_damage"):
-		enemy.take_damage(light_damage,global_position)
+		enemy.take_damage(light_damage, global_position)
 
 func _on_animated_sprite_2d_frame_changed() -> void:
 	if actual_state == state.heavyatk:

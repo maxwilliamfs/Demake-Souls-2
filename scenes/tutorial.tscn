@@ -24,12 +24,11 @@ position = Vector2(1188, 524)
 [node name="Oldlady" parent="." unique_id=867178774 instance=ExtResource("4_4kmhl")]
 position = Vector2(96, 204)
 
-[node name="Pursuer" parent="." unique_id=609474206 instance=ExtResource("5_cq4me")]
+[node name="Pursuer" parent="." unique_id=609474206 groups=["Enemy"] instance=ExtResource("5_cq4me")]
 position = Vector2(90, 395)
 
-[node name="Camera" parent="." unique_id=263345573 node_paths=PackedStringArray("player_one", "player_two") instance=ExtResource("6_6yjpi")]
+[node name="Camera" parent="." unique_id=263345573 node_paths=PackedStringArray("player_one") instance=ExtResource("6_6yjpi")]
 player_one = NodePath("../Solair")
-player_two = NodePath("")
 
 [connection signal="damage_taken" from="Solair" to="Hud" method="_on_solair_damage_taken"]
 [connection signal="estus" from="Solair" to="Hud" method="_on_solair_estus"]

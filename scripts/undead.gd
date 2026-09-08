@@ -1,4 +1,6 @@
 extends CharacterBody2D
+#Instancias
+@onready var animated_sprite = $AnimatedSprite2D
 
 #Enuns
 enum state {idle,pursue,attack,cooldown,damage,death}

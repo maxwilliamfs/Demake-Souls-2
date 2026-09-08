@@ -1,2 +1,6 @@
-res://scenes/menu.tscn
-res://scenes/menu.gd
+res://scripts/pursuer.gd
+res://scenes/tutorial.tscn
+res://scenes/characters/pursuer.tscn
+res://scripts/solair.gd
+res://scenes/characters/Solair.tscn
+res://scenes/characters/Undead.tscn
