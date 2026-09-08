@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dqjt3ug3412c8" path="res://sprites/Itens/Estus_sprite_3.png" id="5_uo2fv"]
 [ext_resource type="Texture2D" uid="uid://bb84gg871v5gd" path="res://sprites/Itens/almas_hud_vazio.png" id="7_5pdws"]
 [ext_resource type="FontFile" uid="uid://crs5ghsfookk1" path="res://fonts/OptimusPrincepsSemiBold.ttf" id="8_hd3ao"]
+[ext_resource type="Texture2D" uid="uid://p6g2ihgvd0u3" path="res://images/YOU DIED.png" id="9_mphia"]
 [ext_resource type="AudioStream" uid="uid://cqrsi718qf48b" path="res://soundeffects/died_effect.mp3" id="10_mphia"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_047uy"]
@@ -65,11 +66,6 @@ animations = [{
 font = ExtResource("8_hd3ao")
 font_size = 34
 
-[sub_resource type="LabelSettings" id="LabelSettings_kejrx"]
-font = ExtResource("8_hd3ao")
-font_size = 150
-font_color = Color(0.45490196, 0, 0, 1)
-
 [node name="Hud" type="CanvasLayer" unique_id=1522043168]
 script = ExtResource("1_047uy")
 
@@ -119,6 +115,7 @@ texture = ExtResource("2_5ysmq")
 metadata/_edit_group_ = true
 
 [node name="Estus" type="AnimatedSprite2D" parent="Control/Invetory" unique_id=1967806288]
+visible = false
 position = Vector2(32.285713, 48.857147)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_kejrx")
@@ -146,22 +143,9 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Death" type="ColorRect" parent="Death" unique_id=2029182950]
-layout_mode = 0
-offset_left = -14.0
-offset_top = 272.0
-offset_right = 1289.0
-offset_bottom = 467.0
-color = Color(0, 0, 0, 1)
-
-[node name="Label_Death" type="Label" parent="Death" unique_id=1698655429]
-layout_mode = 0
-offset_left = 59.0
-offset_top = 286.0
-offset_right = 1190.0
-offset_bottom = 450.0
-text = "     YOU DIED"
-label_settings = SubResource("LabelSettings_kejrx")
+[node name="Sprite2D" type="Sprite2D" parent="Death" unique_id=2098837113]
+position = Vector2(634, 118)
+texture = ExtResource("9_mphia")
 
 [node name="DeathTimer" type="Timer" parent="Death" unique_id=2046022908]
 wait_time = 2.0

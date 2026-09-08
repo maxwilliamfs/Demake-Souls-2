@@ -14,7 +14,7 @@ var velocity_ : int = 200
 var knockback_vector : Vector2
 var knockback_force : int = 300
 var estus_taked : bool = false
-var estus_qtd : int = 3
+var estus_qtd : int = 0
 var heavy_damage : int = 50
 var light_damage : int = 30
 

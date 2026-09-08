@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://c8wbba43cdtj4" path="res://scenes/characters/Undead.tscn" id="2_8ho6b"]
 [ext_resource type="PackedScene" uid="uid://dxb43lp8i4pcw" path="res://scenes/hud.tscn" id="3_ph3nu"]
 [ext_resource type="PackedScene" uid="uid://gdoprtwc6wul" path="res://scenes/characters/oldlady.tscn" id="4_4kmhl"]
-[ext_resource type="PackedScene" uid="uid://dro8a465hnib7" path="res://scenes/characters/pursuer.tscn" id="5_cq4me"]
 [ext_resource type="PackedScene" uid="uid://b3kscirt65qko" path="res://scenes/camera.tscn" id="6_6yjpi"]
 
 [node name="Tutorial" type="Node2D" unique_id=20960459]
@@ -23,9 +22,6 @@ position = Vector2(1188, 524)
 
 [node name="Oldlady" parent="." unique_id=867178774 instance=ExtResource("4_4kmhl")]
 position = Vector2(96, 204)
-
-[node name="Pursuer" parent="." unique_id=609474206 groups=["Enemy"] instance=ExtResource("5_cq4me")]
-position = Vector2(90, 395)
 
 [node name="Camera" parent="." unique_id=263345573 node_paths=PackedStringArray("player_one") instance=ExtResource("6_6yjpi")]
 player_one = NodePath("../Solair")

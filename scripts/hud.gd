@@ -7,6 +7,7 @@ var tween: Tween
 var life : int = 100
 var is_dead : bool = false
 var souls : int = 0
+var estus_unlock : bool = false
 
 #Instancias
 @onready var life_bar = $Control/Base_Life/Life
@@ -36,6 +37,8 @@ func _process(_delta: float) -> void:
 
 #Funcoes
 func use_estus() -> void:
+	if !estus_unlock:
+		return
 	if estus <= 0 or is_dead:
 		return
 	estus -= 1

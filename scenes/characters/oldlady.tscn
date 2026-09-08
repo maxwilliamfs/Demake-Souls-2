@@ -491,7 +491,7 @@ script = ExtResource("1_lq6px")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1171560502]
 z_index = 2
 sprite_frames = SubResource("SpriteFrames_kejrx")
-animation = &"estus_right"
+animation = &"idle_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=121097226]
 shape = SubResource("CapsuleShape2D_vx5a4")

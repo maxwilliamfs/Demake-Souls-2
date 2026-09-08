@@ -1,8 +1,10 @@
+CanvasLayer
+Sprite2D
+Control
 CollisionShape2D
 Timer
 Area2D
 ColorRect
-Control
 Label
 Camera2D
 Node2D
@@ -10,5 +12,3 @@ AnimatedSprite2D
 CharacterBody2D
 StaticBody2D
 AudioStreamPlayer2D
-TextureRect
-Sprite2D
