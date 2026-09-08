@@ -10,7 +10,7 @@ var actual_diretional : diretional
 
 #Atributos
 var vector_diretional : Vector2 = Vector2(0,0)
-var velocity_ : int = 200
+var velocity_ : int = 170
 var knockback_vector : Vector2
 var knockback_force : int = 300
 var estus_taked : bool = false
@@ -18,15 +18,17 @@ var estus_qtd : int = 0
 var heavy_damage : int = 50
 var light_damage : int = 30
 var pause_stamina_timer : float = 0
-var roll_force : int = 500
+var roll_force : int = 400
 var roll_vector : Vector2
 var roll : bool = false
 var stamina : float = 100
+var stamina_heavyatk : int = 20
+var stamina_lightatk : int = 10
 
 #Signals
 signal damage_taken(damage : int)
 signal estus
-signal roll_s
+signal stamina_s(value : int)
 signal souls(value : int)
 
 #Instancias
@@ -97,19 +99,22 @@ func cancel_dialogue() -> void:
 
 func processing_free() -> void:
 	if Input.is_action_just_pressed("heal"):
-		if estus_qtd <= 0:
-			return
-		actual_state = state.heal
+		if estus_qtd >= 1:
+			actual_state = state.heal
 	elif Input.is_action_just_pressed("heavy_attack"):
 		actual_state = state.heavyatk
+		stamina_s.emit(stamina_heavyatk)
+		stamina -= stamina_heavyatk
 	elif Input.is_action_just_pressed("light_attack"):
 		actual_state = state.lightatk
+		stamina_s.emit(stamina_lightatk)
+		stamina -= stamina_lightatk
 	elif Input.is_action_just_pressed("roll"):
 		if stamina >= 40:
 			stamina -= 40
 			pause_stamina_timer = 1.0
 			actual_state = state.roll
-			roll_s.emit()
+			stamina_s.emit(40)
 	
 	#Movimento Horizontal
 	if Input.is_action_pressed("mov_right"):

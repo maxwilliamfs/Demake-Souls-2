@@ -16,8 +16,8 @@ texture = ExtResource("1_w8wr1")
 wait_time = 2.0
 one_shot = true
 
-[node name="Death_audio" type="AudioStreamPlayer2D" parent="." unique_id=733039589]
+[node name="Death_audio" type="AudioStreamPlayer" parent="." unique_id=43616693]
 stream = ExtResource("2_tjai8")
-volume_db = 15.0
+volume_db = 12.0
 
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

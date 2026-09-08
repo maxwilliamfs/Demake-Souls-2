@@ -74,16 +74,16 @@ func _on_solair_estus() -> void:
 func _on_solair_souls(value: int) -> void:
 	souls += value
 
-func _on_solair_roll_s() -> void:
-	if stamina < roll_stamina:
+func _on_dialogue_estus_unlocked() -> void:
+	estus_unlock = true
+	estus_animation.show()
+
+func _on_solair_stamina_s(value: int) -> void:
+	if stamina < value:
 		return
 	if stamina_tween:
 		stamina_tween.kill()
 	stamina_tween = create_tween()
-	stamina = clampf(stamina - roll_stamina, 0, stamina_bar.max_value) 
+	stamina = clampf(stamina - value, 0, stamina_bar.max_value) 
 	pause_time_stamina = 1.0
 	stamina_tween.tween_property(stamina_bar, "value", stamina, pause_time_stamina).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-
-func _on_dialogue_estus_unlocked() -> void:
-	estus_unlock = true
-	estus_animation.show()

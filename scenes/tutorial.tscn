@@ -13,24 +13,26 @@
 [node name="Tutorial" type="Node2D" unique_id=20960459]
 
 [node name="Solair" parent="." unique_id=252625353 instance=ExtResource("1_c13y7")]
-position = Vector2(418.99997, 211.00005)
+position = Vector2(308.00003, 189)
 metadata/_edit_group_ = true
 
 [node name="Undead" parent="." unique_id=1005191574 instance=ExtResource("2_8ho6b")]
-position = Vector2(1204, 173)
+position = Vector2(1765, -108.000015)
 
 [node name="Undead2" parent="." unique_id=1517027626 instance=ExtResource("2_8ho6b")]
-position = Vector2(1188, 524)
+position = Vector2(1806, 314)
 
 [node name="Hud" parent="." unique_id=1522043168 instance=ExtResource("3_ph3nu")]
 
 [node name="Oldlady" parent="." unique_id=867178774 instance=ExtResource("4_4kmhl")]
-position = Vector2(96, 204)
+position = Vector2(101, 225)
+actual_diretional = 1
 
 [node name="Camera" parent="." unique_id=263345573 node_paths=PackedStringArray("player_one") instance=ExtResource("6_6yjpi")]
 player_one = NodePath("../Solair")
 
 [node name="Pursuer" parent="." unique_id=609474206 instance=ExtResource("6_gbqnl")]
+position = Vector2(1758, 778)
 
 [node name="Death" parent="." unique_id=919273281 instance=ExtResource("7_gbqnl")]
 
@@ -40,8 +42,8 @@ player_one = NodePath("../Solair")
 
 [connection signal="damage_taken" from="Solair" to="Hud" method="_on_solair_damage_taken"]
 [connection signal="estus" from="Solair" to="Hud" method="_on_solair_estus"]
-[connection signal="roll_s" from="Solair" to="Hud" method="_on_solair_roll_s"]
 [connection signal="souls" from="Solair" to="Hud" method="_on_solair_souls"]
+[connection signal="stamina_s" from="Solair" to="Hud" method="_on_solair_stamina_s"]
 [connection signal="death" from="Hud" to="Solair" method="_on_hud_death"]
 [connection signal="death" from="Hud" to="Death" method="_on_hud_death"]
 [connection signal="talk" from="Oldlady" to="Dialogue" method="_on_oldlady_talk"]

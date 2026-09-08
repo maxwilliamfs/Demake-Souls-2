@@ -1662,10 +1662,6 @@ shape = SubResource("CapsuleShape2D_kejrx")
 [node name="Pivot" type="Node2D" parent="." unique_id=1449940041]
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="Hitbox2D" type="Area2D" parent="Pivot" unique_id=163771315]
-collision_layer = 32
-collision_mask = 16
-
 [node name="Hurtbox2D" type="Area2D" parent="Pivot" unique_id=776303453]
 collision_layer = 64
 collision_mask = 8
@@ -1712,7 +1708,6 @@ one_shot = true
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
-[connection signal="area_shape_entered" from="Pivot/Hitbox2D" to="." method="_on_hitbox_2d_area_shape_entered"]
 [connection signal="body_entered" from="Pivot/Range2D" to="." method="_on_range_2d_body_entered"]
 [connection signal="body_exited" from="Pivot/Range2D" to="." method="_on_range_2d_body_exited"]
 [connection signal="area_entered" from="Pivot/Hitbox1" to="." method="_on_hitbox_1_area_entered"]

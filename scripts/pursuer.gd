@@ -22,7 +22,7 @@ var souls_dropped : int = 10000
 var attack_finisheds : int = 0
 var player_in_range : bool = false
 var actual_attack : int
-var attack_dash : int = 500
+var attack_dash : int = 550
 
 #Pre Processamento
 const SOUL_SCENE = preload("res://scenes/soul.tscn")
@@ -100,6 +100,7 @@ func attack1() -> void:
 	if !attack_trigger:
 		diretional_animation("attack1_right","attack1_left")
 		direction_trigger = global_position.direction_to(player.global_position)
+		actualize_directio(direction_trigger)
 		attack_trigger = true
 		velocity = direction_trigger * attack_dash
 		attack_finisheds -= 1
@@ -109,6 +110,7 @@ func attack1() -> void:
 func attack2() -> void:
 	if !attack_trigger:
 		direction_trigger = global_position.direction_to(player.global_position)
+		actualize_directio(direction_trigger)
 		if attack_finisheds == 2:
 			diretional_animation("attack1_right", "attack1_left")
 		elif attack_finisheds == 1:
@@ -123,6 +125,7 @@ func attack2() -> void:
 func attack3() -> void:
 	if !attack_trigger:
 		direction_trigger = global_position.direction_to(player.global_position)
+		actualize_directio(direction_trigger)
 		if attack_finisheds == 3:
 			diretional_animation("attack1_right", "attack1_left")
 		elif attack_finisheds == 2:
@@ -136,15 +139,17 @@ func attack3() -> void:
 	velocity = velocity.lerp(Vector2.ZERO, 0.03)
 	move_and_slide()
 
-func pursue() -> void:
-	var direction = global_position.direction_to(player.global_position)
-	
-	if direction.x > 0:
+func actualize_directio(vector : Vector2) -> void:
+	if vector.x > 0:
 		actual_diretional = diretional.right
 		combat_pivot.scale.x = -1
 	else:
 		actual_diretional = diretional.left
 		combat_pivot.scale.x = 1
+
+func pursue() -> void:
+	var direction = global_position.direction_to(player.global_position)
+	actualize_directio(direction)
 	diretional_animation("walk_right","walk_left")
 	
 	velocity = _velocity * direction

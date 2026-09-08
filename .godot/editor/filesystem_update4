@@ -5,3 +5,8 @@ res://scripts/pursuer.gd
 res://scenes/characters/pursuer.tscn
 res://scenes/menssages.tscn
 res://scenes/pursuer_hud.tscn
+res://scenes/characters/Solair.tscn
+res://scripts/solair.gd
+res://scenes/death.tscn
+res://scripts/hud.gd
+res://scripts/death.gd

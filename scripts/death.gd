@@ -4,8 +4,6 @@ extends CanvasLayer
 @onready var death_timer = $DeathTimer
 @onready var death_audio = $Death_audio
 
-
-
 func _on_hud_death() -> void:
 	death_audio.play()
 	death_timer.start()
