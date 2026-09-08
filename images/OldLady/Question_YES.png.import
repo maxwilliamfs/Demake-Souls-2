@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bprde1o2h61w1"
-path="res://.godot/imported/Estus adquirido.png-40675dc00f994121370681777fdb427d.ctex"
+uid="uid://bdxu2e3cn4d52"
+path="res://.godot/imported/Question_YES.png-3514c9208c839461713a62f595bfddf5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Estus adquirido.png"
-dest_files=["res://.godot/imported/Estus adquirido.png-40675dc00f994121370681777fdb427d.ctex"]
+source_file="res://images/OldLady/Question_YES.png"
+dest_files=["res://.godot/imported/Question_YES.png-3514c9208c839461713a62f595bfddf5.ctex"]
 
 [params]
 

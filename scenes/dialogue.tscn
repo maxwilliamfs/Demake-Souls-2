@@ -1,3 +1,60 @@
 [gd_scene format=3 uid="uid://bkwabm41lb5fe"]
 
+[ext_resource type="Texture2D" uid="uid://cvgxc4dn7fowt" path="res://images/OldLady/1.png" id="1_vogiq"]
+[ext_resource type="Script" uid="uid://dxy35nbm8pwt1" path="res://scripts/dialogue.gd" id="1_x1cjp"]
+[ext_resource type="Texture2D" uid="uid://cs3wrpw67r3n" path="res://images/OldLady/3.png" id="2_x1cjp"]
+[ext_resource type="Texture2D" uid="uid://4dfuau33e0kx" path="res://images/OldLady/4.png" id="3_tp716"]
+[ext_resource type="Texture2D" uid="uid://jdub13r763bb" path="res://images/Estus_unlocked.png" id="4_03vpb"]
+[ext_resource type="Texture2D" uid="uid://bdxu2e3cn4d52" path="res://images/OldLady/Question_YES.png" id="5_ccu7b"]
+[ext_resource type="Texture2D" uid="uid://cyefjyxx63vbi" path="res://images/OldLady/Question_NO.png" id="6_6xhvj"]
+
 [node name="Dialogue" type="CanvasLayer" unique_id=1821632590]
+script = ExtResource("1_x1cjp")
+
+[node name="OldLady" type="Control" parent="." unique_id=2103877269]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1" type="Sprite2D" parent="OldLady" unique_id=1816513136]
+visible = false
+position = Vector2(609, 552)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_vogiq")
+
+[node name="2" type="Sprite2D" parent="OldLady" unique_id=1392117465]
+visible = false
+position = Vector2(609, 552)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_x1cjp")
+
+[node name="3" type="Sprite2D" parent="OldLady" unique_id=1682587742]
+visible = false
+position = Vector2(609, 552)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_tp716")
+
+[node name="4" type="Sprite2D" parent="OldLady" unique_id=1343160051]
+visible = false
+position = Vector2(609, 552)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_tp716")
+
+[node name="Estus" type="Sprite2D" parent="OldLady" unique_id=1563769653]
+visible = false
+position = Vector2(600.99994, 366.99997)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_03vpb")
+
+[node name="Question_YES" type="Sprite2D" parent="OldLady" unique_id=1279125971]
+visible = false
+position = Vector2(611, 549)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_ccu7b")
+
+[node name="Question_NO" type="Sprite2D" parent="OldLady" unique_id=1652135383]
+visible = false
+position = Vector2(611, 549)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_6xhvj")

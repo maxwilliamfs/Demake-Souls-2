@@ -6,3 +6,4 @@ res://scripts/hud.gd
 res://scenes/death.tscn
 res://scripts/death.gd
 res://scenes/hud.tscn
+res://scenes/dialogue.tscn

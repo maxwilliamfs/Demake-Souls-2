@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1mivn3m8iorn"
-path="res://.godot/imported/Conversar com Idosa.png-2e7f4c358dc28420b0bd901b5a92b3b8.ctex"
+uid="uid://cyefjyxx63vbi"
+path="res://.godot/imported/Question_NO.png-5b802af5ef940804cd5bcf6d0e44363d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Conversar com Idosa.png"
-dest_files=["res://.godot/imported/Conversar com Idosa.png-2e7f4c358dc28420b0bd901b5a92b3b8.ctex"]
+source_file="res://images/OldLady/Question_NO.png"
+dest_files=["res://.godot/imported/Question_NO.png-5b802af5ef940804cd5bcf6d0e44363d.ctex"]
 
 [params]
 
