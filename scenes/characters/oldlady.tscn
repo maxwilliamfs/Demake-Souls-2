@@ -313,7 +313,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mdb75")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"estus_left",
 "speed": 13.0
 }, {
@@ -366,7 +366,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d1uo8")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"estus_right",
 "speed": 13.0
 }, {
@@ -419,7 +419,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rwjgu")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"idle_left",
 "speed": 13.0
 }, {
@@ -472,7 +472,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_s58sh")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"idle_right",
 "speed": 13.0
 }]
@@ -482,21 +482,28 @@ radius = 13.0
 height = 52.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kejrx"]
-radius = 40.4475
+radius = 68.67962
 
 [node name="Oldlady" type="StaticBody2D" unique_id=867178774]
 scale = Vector2(1.5, 1.5)
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_lq6px")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1171560502]
 z_index = 2
 sprite_frames = SubResource("SpriteFrames_kejrx")
-animation = &"idle_right"
+animation = &"estus_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=121097226]
 shape = SubResource("CapsuleShape2D_vx5a4")
 
 [node name="Interect2D" type="Area2D" parent="." unique_id=282807338]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interect2D" unique_id=1572074976]
 shape = SubResource("CircleShape2D_kejrx")
+
+[connection signal="body_entered" from="Interect2D" to="." method="_on_interect_2d_body_entered"]
+[connection signal="body_exited" from="Interect2D" to="." method="_on_interect_2d_body_exited"]

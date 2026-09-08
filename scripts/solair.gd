@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #Enuns
-enum state {free,heal,heavyatk,lightatk,damage,death,roll}
+enum state {free,heal,heavyatk,lightatk,damage,death,roll,dialogue}
 enum diretional {left,right}
 
 #Declaraçoes de Enuns
@@ -14,7 +14,7 @@ var velocity_ : int = 200
 var knockback_vector : Vector2
 var knockback_force : int = 300
 var estus_taked : bool = false
-var estus_qtd : int = 3
+var estus_qtd : int = 0
 var heavy_damage : int = 50
 var light_damage : int = 30
 var pause_stamina_timer : float = 0
@@ -84,6 +84,16 @@ func _physics_process(delta: float) -> void:
 			else:
 				velocity = velocity.lerp(Vector2.ZERO, 0.8)
 			move_and_slide()
+		state.dialogue:
+			diretional_animation("idle_right","idle_left")
+			velocity = Vector2.ZERO
+			move_and_slide()
+
+func dialogue() -> void:
+	actual_state = state.dialogue
+
+func cancel_dialogue() -> void:
+	actual_state = state.free
 
 func processing_free() -> void:
 	if Input.is_action_just_pressed("heal"):
@@ -161,6 +171,8 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		light_hitbox.monitoring = false
 	if actual_state == state.roll:
 		roll = false
+	if actual_state == state.dialogue:
+		return
 	actual_state = state.free
 
 func _on_hud_death() -> void:
@@ -192,3 +204,7 @@ func _on_animated_sprite_2d_frame_changed() -> void:
 			11:
 				light_hitbox.monitoring = false
 				velocity = Vector2.ZERO
+
+
+func _on_dialogue_estus_unlocked() -> void:
+	estus_qtd = 3

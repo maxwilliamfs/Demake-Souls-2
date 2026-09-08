@@ -11,16 +11,13 @@ var stamina_tween: Tween
 var is_dead : bool = false
 var souls : int = 0
 var roll_stamina : int = 40
-var estus_unlock : bool = true
+var estus_unlock : bool = false
 var pause_time_stamina : float = 0
 
 #Instancias
 @onready var life_bar = $Control/Base_Life/Life
 @onready var stamina_bar = $Control/Base_Life/Stamina
 @onready var estus_animation = $Control/Invetory/Estus
-@onready var death_timer = $Death/DeathTimer
-@onready var death_scene = $Death
-@onready var death_audio = $Death/Death_audio
 @onready var souls_label = $Control/Souls_Label
 
 #Signals
@@ -86,3 +83,7 @@ func _on_solair_roll_s() -> void:
 	stamina = clampf(stamina - roll_stamina, 0, stamina_bar.max_value) 
 	pause_time_stamina = 1.0
 	stamina_tween.tween_property(stamina_bar, "value", stamina, pause_time_stamina).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+
+func _on_dialogue_estus_unlocked() -> void:
+	estus_unlock = true
+	estus_animation.show()
