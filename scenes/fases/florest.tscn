@@ -7151,7 +7151,12 @@ tile_set = SubResource("TileSet_3gngh")
 [node name="Solair" parent="." unique_id=252625353 instance=ExtResource("6_njbp1")]
 position = Vector2(426, 194)
 
-[node name="Camera" parent="." unique_id=263345573 instance=ExtResource("7_1xqnc")]
+[node name="Camera" parent="." unique_id=263345573 node_paths=PackedStringArray("player_one") instance=ExtResource("7_1xqnc")]
+limit_left = -70
+limit_top = -400
+limit_right = 3700
+limit_bottom = 950
+player_one = NodePath("../Solair")
 
 [node name="Undead" parent="." unique_id=1005191574 instance=ExtResource("8_1xp8e")]
 position = Vector2(2848, 5.000004)
@@ -7230,3 +7235,4 @@ shape = SubResource("SegmentShape2D_nvrgg")
 [connection signal="estus_unlocked" from="Dialogue" to="Solair" method="_on_dialogue_estus_unlocked"]
 [connection signal="estus_unlocked" from="Dialogue" to="Hud" method="_on_dialogue_estus_unlocked"]
 [connection signal="bonfire" from="Bonfire" to="Hud" method="_on_bonfire_bonfire"]
+[connection signal="boss_fight" from="Bonfire" to="Dialogue" method="_on_bonfire_boss_fight"]

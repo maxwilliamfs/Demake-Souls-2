@@ -143,6 +143,7 @@ func processing_free() -> void:
 		vector_diretional.y = 0
 	
 	choose_animation()
+	vector_diretional = vector_diretional.normalized()
 	velocity = vector_diretional * velocity_ 
 	move_and_slide()
 
