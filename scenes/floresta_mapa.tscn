@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ds4ufqhhv4svj"]
+
+[ext_resource type="PackedScene" uid="uid://djp75rh3ixcco" path="res://scenes/characters/Solair.tscn" id="1_o32kg"]
+[ext_resource type="PackedScene" uid="uid://b3kscirt65qko" path="res://scenes/camera.tscn" id="2_672nx"]
+[ext_resource type="PackedScene" uid="uid://bqwb4fj1w8r8h" path="res://scenes/tilemaps/tile_florest.tscn" id="3_o32kg"]
+
+[node name="Floresta" type="Node2D" unique_id=1540665739]
+
+[node name="Solair" parent="." unique_id=252625353 instance=ExtResource("1_o32kg")]
+z_index = 2
+position = Vector2(197.99998, 185.99998)
+
+[node name="Camera" parent="." unique_id=263345573 instance=ExtResource("2_672nx")]
+
+[node name="Tile_Florest" parent="." unique_id=1576394016 instance=ExtResource("3_o32kg")]
+y_sort_enabled = true

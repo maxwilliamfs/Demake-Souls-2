@@ -1,7 +1,7 @@
+TileMapLayer
 Node
 Sprite2D
 AudioStreamPlayer
-TileMapLayer
 Label
 TextureRect
 TextureProgressBar
@@ -12,4 +12,3 @@ Control
 Timer
 ColorRect
 Camera2D
-Node2D
