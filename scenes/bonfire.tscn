@@ -89,7 +89,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kejrx"]
-radius = 56.008926
+radius = 49.0
 
 [node name="Bonfire" type="Area2D" unique_id=1476235993]
 y_sort_enabled = true
@@ -97,14 +97,14 @@ collision_mask = 2
 script = ExtResource("1_xk3wp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=768621956]
-position = Vector2(-0.99999905, -35)
-scale = Vector2(1.1865672, 1.125)
+position = Vector2(0, -22)
+scale = Vector2(0.7, 0.663)
 sprite_frames = SubResource("SpriteFrames_kejrx")
 animation = &"idle"
-frame_progress = 0.025440374
+frame_progress = 0.97887874
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1519599460]
-position = Vector2(1, -26)
+position = Vector2(0, -12)
 shape = SubResource("CircleShape2D_kejrx")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
