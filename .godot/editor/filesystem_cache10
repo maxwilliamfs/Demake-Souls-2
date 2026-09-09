@@ -1,8 +1,9 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1788968244
+::res://::1788972431
 default_bus_layout.tres::AudioBusLayout::9009006389903374977::1788964866::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::6451270279686810702::1788962817::1788963040::1::::<><><>0<>0<>63d43aa2f5b3a353480a2b3d20c10551<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1788962818::0::1::::<><><>0<>0<><>::
+florest.tscn::PackedScene::8484271293972375538::1788972431::0::1::::<><><>0<>0<><>::uid://carjvfsqqyti3::::res://scenes/tilemaps/florest_tile_set.tscn<>uid://c7wwnlo03ivtd::::res://tileset/Florest/Tileset-Terrain2.png<>uid://djp75rh3ixcco::::res://scenes/characters/Solair.tscn<>uid://b3kscirt65qko::::res://scenes/camera.tscn<>uid://c8wbba43cdtj4::::res://scenes/characters/Undead.tscn
 ::res://fonts/::1788963040
 OptimusPrinceps.ttf::FontFile::4898531076560224369::1788962817::1788963040::1::::<><><>0<>0<>eab0c00c1a163709fa0b235e57d9fa99<>res://.godot/imported/OptimusPrinceps.ttf-9ef40ba70ba9e5e42178542d1b728de4.fontdata::
 OptimusPrincepsSemiBold.ttf::FontFile::6005043129068630406::1788962817::1788963040::1::::<><><>0<>0<>4c8c3681fd9b31ca15d4f68e3d5ffa93<>res://.godot/imported/OptimusPrincepsSemiBold.ttf-df3d9e0a9fe5858278717a352d9a40f7.fontdata::
@@ -92,7 +93,7 @@ dead_move_right.png::CompressedTexture2D::1106803506790290303::1788914328::17889
 ::res://sprites/Solair/idle/::1788963041
 idle_left.png::CompressedTexture2D::5730270425830566758::1788914329::1788963041::1::::<><><>0<>0<>92afa94552644f3af25e77fbce64a589<>res://.godot/imported/idle_left.png-a7fac908fc38dd938d40f51a8d3150d7.ctex::
 idle_right.png::CompressedTexture2D::5055563875010593742::1788914329::1788963041::1::::<><><>0<>0<>77db1f756c6f9f884a6bb99c5e709b66<>res://.godot/imported/idle_right.png-6fc78777a7ac4da6675afa6573a2bce3.ctex::
-::res://sprites/Solair/others/::1788970489
+::res://sprites/Solair/others/::1788970493
 Bonfire_interaction_left.png::CompressedTexture2D::5687858083437819201::1788970489::1788970493::1::::<><><>0<>0<>e84ecef560ce8dc880c455857cb0df72<>res://.godot/imported/Bonfire_interaction_left.png-753ffb0abcd8c364aa48d5b349cf8149.ctex::
 Bonfire_interaction_right.png::CompressedTexture2D::1640621487062715328::1788970475::1788970493::1::::<><><>0<>0<>b2367dfcb2546e603e4e9b08438ec6bd<>res://.godot/imported/Bonfire_interaction_right.png-a4aa4f5b9d762ebe4ad3e80ee49521c6.ctex::
 Healing_left.png::CompressedTexture2D::65943845248819758::1788914329::1788963041::1::::<><><>0<>0<>3a4c041a70ca4626750c5e52e36db700<>res://.godot/imported/Healing_left.png-2cab61b521142e78cabf3f31dc264204.ctex::
@@ -141,7 +142,8 @@ idle_right.png::CompressedTexture2D::4031966103108774941::1788914329::1788963040
 walk_left.png::CompressedTexture2D::328496229243266652::1788914329::1788963040::1::::<><><>0<>0<>fe6c637e0263f06061a0dd2002df6f72<>res://.godot/imported/walk_left.png-591ab7b72d81ccfddd002913c772f3ca.ctex::
 walk_right.png::CompressedTexture2D::4060668584592922085::1788914329::1788963040::1::::<><><>0<>0<>27d8fd798214289c1e190b417d888490<>res://.godot/imported/walk_right.png-d52c808a632b86959b2781a5824a9ade.ctex::
 ::res://tileset/::1788968202
-::res://tileset/Florest/::1788968245
+::res://tileset/Florest/::1788973459
+Arvore_pra_caramba.png::CompressedTexture2D::6267388015772146851::1788973459::1788973461::1::::<><><>0<>0<>5b231fdf63d3821d0ac45da67f20f559<>res://.godot/imported/Arvore_pra_caramba.png-12576841db481323c02ca705fb7bc641.ctex::
 Tileset-Animated Terrains-8 frames- transparency.png::CompressedTexture2D::8032426417172682968::1788968202::1788968245::1::::<><><>0<>0<>f5f831fd17820c1a703546a4e42cd2fe<>res://.godot/imported/Tileset-Animated Terrains-8 frames- transparency.png-3984872bc0dedb7a6cd5d81a0b4ed289.ctex::
 Tileset-Animated Terrains-8 frames-.png::CompressedTexture2D::89687029902447211::1788968202::1788968245::1::::<><><>0<>0<>9e44a7430c453dbebbd239ecf3e10667<>res://.godot/imported/Tileset-Animated Terrains-8 frames-.png-94eb74ef889a3fab69b374258eb07390.ctex::
 Tileset-Terrain2.png::CompressedTexture2D::7065660264111935101::1788968202::1788968245::1::::<><><>0<>0<>631bb1f7b6e0936ef0c7dec8cf65aff0<>res://.godot/imported/Tileset-Terrain2.png-3e2b7c096f0b481f5fa5354fc999de59.ctex::
