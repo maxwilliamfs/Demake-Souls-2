@@ -1,6 +1,6 @@
+TileMapLayer
 CollisionShape2D
 StaticBody2D
-TileMapLayer
 Sprite2D
 Node
 AudioStreamPlayer
