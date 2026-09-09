@@ -1622,8 +1622,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kejrx"]
-radius = 19.0
-height = 38.0
+radius = 12.800001
+height = 62.399998
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ucnw"]
 radius = 25.600004
@@ -1645,22 +1645,26 @@ radius = 69.600006
 height = 156.80002
 
 [node name="Pursuer" type="CharacterBody2D" unique_id=609474206]
-z_index = 1
+y_sort_enabled = true
 scale = Vector2(1.25, 1.25)
 collision_layer = 4
 collision_mask = 3
+motion_mode = 1
 script = ExtResource("1_w4b87")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1299474090]
-z_index = 2
+y_sort_enabled = true
+position = Vector2(0, -50)
 sprite_frames = SubResource("SpriteFrames_kejrx")
 animation = &"attack3_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1470106725]
-position = Vector2(0, 42)
+position = Vector2(2.4, -8.799999)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_kejrx")
 
 [node name="Pivot" type="Node2D" parent="." unique_id=1449940041]
+position = Vector2(0, -50)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Hurtbox2D" type="Area2D" parent="Pivot" unique_id=776303453]
@@ -1682,6 +1686,7 @@ shape = SubResource("CapsuleShape2D_br0en")
 [node name="Hitbox1" type="Area2D" parent="Pivot" unique_id=722935451]
 collision_layer = 32
 collision_mask = 16
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Hitbox1" unique_id=1645400993]
 position = Vector2(-24.800001, -4.7999997)
@@ -1691,6 +1696,7 @@ shape = SubResource("CapsuleShape2D_mnbdc")
 [node name="Hitbox2" type="Area2D" parent="Pivot" unique_id=501091439]
 collision_layer = 32
 collision_mask = 16
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Hitbox2" unique_id=1363725695]
 position = Vector2(-19.2, -12.000002)
@@ -1699,6 +1705,7 @@ shape = SubResource("CircleShape2D_kejrx")
 [node name="Hitbox3" type="Area2D" parent="Pivot" unique_id=687453968]
 collision_layer = 32
 collision_mask = 16
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Hitbox3" unique_id=1986188763]
 position = Vector2(-24.800003, -4.8)

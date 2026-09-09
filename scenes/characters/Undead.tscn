@@ -1256,23 +1256,24 @@ radius = 1.2666668
 height = 5.7333336
 
 [node name="Undead" type="CharacterBody2D" unique_id=1005191574 groups=["Enemy"]]
-z_index = 1
+y_sort_enabled = true
 scale = Vector2(1.25, 1.25)
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_s87lk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=23282987]
-z_index = 2
+position = Vector2(0, -30)
 sprite_frames = SubResource("SpriteFrames_40bpm")
 animation = &"idle_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1866415430]
-position = Vector2(-3.3333335, 24.666668)
+position = Vector2(0, -5.333)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_df7md")
 
 [node name="Pivot" type="Node2D" parent="." unique_id=943930170]
+position = Vector2(0, -30)
 
 [node name="Hitbox2D" type="Area2D" parent="Pivot" unique_id=759817171]
 collision_layer = 32

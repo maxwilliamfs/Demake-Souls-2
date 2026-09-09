@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dcgdbbqo50ga" path="res://scenes/pursuer_hud.tscn" id="9_nlqja"]
 
 [node name="Tutorial" type="Node2D" unique_id=20960459]
+y_sort_enabled = true
 
 [node name="Solair" parent="." unique_id=252625353 instance=ExtResource("1_c13y7")]
 position = Vector2(308.00003, 189)
@@ -31,7 +32,7 @@ actual_diretional = 1
 player_one = NodePath("../Solair")
 
 [node name="Pursuer" parent="." unique_id=609474206 instance=ExtResource("6_gbqnl")]
-position = Vector2(2257, 443.99997)
+position = Vector2(521.0001, 277)
 
 [node name="Death" parent="." unique_id=919273281 instance=ExtResource("7_gbqnl")]
 

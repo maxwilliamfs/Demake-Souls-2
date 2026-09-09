@@ -478,24 +478,26 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vx5a4"]
-radius = 23.333334
-height = 61.333336
+radius = 12.666667
+height = 40.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kejrx"]
 radius = 68.67962
 
 [node name="Oldlady" type="StaticBody2D" unique_id=867178774]
+y_sort_enabled = true
 scale = Vector2(1.5, 1.5)
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_lq6px")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1171560502]
-z_index = 2
 sprite_frames = SubResource("SpriteFrames_kejrx")
 animation = &"estus_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=121097226]
+position = Vector2(0.6666667, 15.333334)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_vx5a4")
 
 [node name="Interect2D" type="Area2D" parent="." unique_id=282807338]

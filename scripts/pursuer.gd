@@ -4,7 +4,7 @@ enum state {idle,pursue,attack,cooldown,death}
 enum diretional {left,right}
 
 #Declaracoes de Enuns
-var actual_state : state = state.pursue
+var actual_state : state = state.idle
 var actual_diretional : diretional
 
 #Atributos
@@ -55,7 +55,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	#Flutuacao
 	time += delta * speed_float
-	position.y += sin(time) * amplitude_float
+	position.y += sin(time) * amplitude_float 
 	
 	if actual_state == state.death:
 		return
