@@ -5,6 +5,7 @@ enum dialogue {talk_1,talk_2,talk_3,talk_4,estus,question_yes,question_no,nothin
 
 #Declaracaop de enuns
 var actual_dialogue : dialogue = dialogue.nothing
+var count : bool = true
 
 #signals
 signal cancel(finished : bool)
@@ -49,8 +50,11 @@ func _process(_delta: float) -> void:
 				actual_dialogue = dialogue.nothing
 			dialogue.boss:
 				travel.show()
+				if count:
+					await get_tree().process_frame
+					count = false
 				if Input.is_action_just_pressed("heal"):
-					get_tree().change_scene_to_file("res://scenes/fases/florest.tscn")
+					get_tree().change_scene_to_file("res://scenes/fases/boss_fight.tscn")
 	choose_dialogue()
 
 

@@ -18529,7 +18529,23 @@ texture = ExtResource("5_blpfd")
 sources/0 = SubResource("TileSetAtlasSource_vbkxm")
 sources/1 = SubResource("TileSetAtlasSource_hktbf")
 
-[node name="Florest" type="Node2D" unique_id=1731288423]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kejrx"]
+a = Vector2(12, 763)
+b = Vector2(19, -335)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0ucnw"]
+a = Vector2(-38, -247)
+b = Vector2(1595, -270)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_br0en"]
+a = Vector2(1538, -289)
+b = Vector2(1565, 877)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mnbdc"]
+a = Vector2(-22, 789)
+b = Vector2(1702, 744)
+
+[node name="Boss" type="Node2D" unique_id=1731288423]
 metadata/_edit_horizontal_guides_ = [202.0, 181.0]
 
 [node name="grass3" type="TileMapLayer" parent="." unique_id=654608454]
@@ -18579,6 +18595,20 @@ position = Vector2(1213, 113.999985)
 
 [node name="Pursuer_HUD" parent="." unique_id=99543716 instance=ExtResource("12_50iev")]
 
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=264119554]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1361885768]
+shape = SubResource("SegmentShape2D_kejrx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2141107297]
+shape = SubResource("SegmentShape2D_0ucnw")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1268125677]
+shape = SubResource("SegmentShape2D_br0en")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=339214900]
+shape = SubResource("SegmentShape2D_mnbdc")
+
 [connection signal="bonfired" from="Solair" to="Hud" method="_on_solair_bonfired"]
 [connection signal="damage_taken" from="Solair" to="Hud" method="_on_solair_damage_taken"]
 [connection signal="estus" from="Solair" to="Hud" method="_on_solair_estus"]
@@ -18587,3 +18617,5 @@ position = Vector2(1213, 113.999985)
 [connection signal="death" from="Hud" to="Solair" method="_on_hud_death"]
 [connection signal="death" from="Hud" to="Death" method="_on_hud_death"]
 [connection signal="bonfire" from="Bonfire" to="Hud" method="_on_bonfire_bonfire"]
+[connection signal="damage_taked" from="Pursuer" to="Pursuer_HUD" method="_on_pursuer_damage_taked"]
+[connection signal="defeated" from="Pursuer" to="Pursuer_HUD" method="_on_pursuer_defeated"]

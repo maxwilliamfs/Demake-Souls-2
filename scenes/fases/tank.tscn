@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d4al55lqvkcf2"]
+
+[ext_resource type="Script" uid="uid://b6gjoh5c77rr4" path="res://tank.gd" id="1_c4xvs"]
+[ext_resource type="Texture2D" uid="uid://fxfj1umaaj6o" path="res://images/Obrigado por jogar.png" id="2_01nm4"]
+
+[node name="tank" type="Control" unique_id=533199271]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c4xvs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=293881428]
+position = Vector2(660, 407)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_01nm4")

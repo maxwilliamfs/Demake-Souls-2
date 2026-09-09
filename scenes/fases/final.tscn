@@ -1,5 +1,6 @@
-[gd_scene format=4 uid="uid://bixptqah8ddw"]
+[gd_scene format=4 uid="uid://l5450ypcsqej"]
 
+[ext_resource type="Script" uid="uid://ddnev8nrd6qv2" path="res://scenes/fases/final.gd" id="1_0f5le"]
 [ext_resource type="Texture2D" uid="uid://c7wwnlo03ivtd" path="res://tileset/Florest/Tileset-Terrain2.png" id="2_ipla3"]
 [ext_resource type="Texture2D" uid="uid://eqlhkjv5f1rk" path="res://tileset/ruins/Props.png" id="3_5uhgp"]
 [ext_resource type="Texture2D" uid="uid://cvj772qd7vu7l" path="res://tileset/Florest/Arvore_pra_caramba.png" id="4_f0h8f"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b3kscirt65qko" path="res://scenes/camera.tscn" id="7_1xqnc"]
 [ext_resource type="PackedScene" uid="uid://dxb43lp8i4pcw" path="res://scenes/hud.tscn" id="9_gj60p"]
 [ext_resource type="PackedScene" uid="uid://bkwabm41lb5fe" path="res://scenes/dialogue.tscn" id="11_q2rf8"]
+[ext_resource type="Texture2D" uid="uid://fxfj1umaaj6o" path="res://images/Obrigado por jogar.png" id="12_4kywl"]
 [ext_resource type="PackedScene" uid="uid://c1jhdoqg27y6o" path="res://scenes/bonfire.tscn" id="12_x723b"]
 [ext_resource type="PackedScene" uid="uid://gjegy0bu5k1x" path="res://scenes/death.tscn" id="13_ipla3"]
 
@@ -19500,7 +19502,24 @@ texture = ExtResource("5_blpfd")
 sources/0 = SubResource("TileSetAtlasSource_vbkxm")
 sources/1 = SubResource("TileSetAtlasSource_hktbf")
 
-[node name="Florest" type="Node2D" unique_id=1731288423]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kejrx"]
+a = Vector2(-10, -283)
+b = Vector2(-13, 981)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0ucnw"]
+a = Vector2(-70, -242)
+b = Vector2(1638, -280)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_br0en"]
+a = Vector2(1532, -318)
+b = Vector2(1574, 1213)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mnbdc"]
+a = Vector2(-36, 803)
+b = Vector2(2064, 788)
+
+[node name="Final" type="Node2D" unique_id=1731288423]
+script = ExtResource("1_0f5le")
 metadata/_edit_horizontal_guides_ = [202.0, 181.0]
 
 [node name="grass3" type="TileMapLayer" parent="." unique_id=654608454]
@@ -19532,6 +19551,10 @@ position = Vector2(772, 537)
 scale = Vector2(1.2, 1.2)
 
 [node name="Camera" parent="." unique_id=263345573 instance=ExtResource("7_1xqnc")]
+limit_left = -300
+limit_top = -500
+limit_right = 1750
+limit_bottom = 1000
 
 [node name="Hud" parent="." unique_id=1522043168 instance=ExtResource("9_gj60p")]
 
@@ -19545,6 +19568,27 @@ position = Vector2(524, 239.00002)
 
 [node name="Dialogue" parent="." unique_id=1821632590 instance=ExtResource("11_q2rf8")]
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1788328992]
+visible = false
+position = Vector2(630, 354)
+scale = Vector2(0.8022708, 0.8)
+texture = ExtResource("12_4kywl")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1129323441]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=468750397]
+shape = SubResource("SegmentShape2D_kejrx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1906868049]
+shape = SubResource("SegmentShape2D_0ucnw")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=165563058]
+shape = SubResource("SegmentShape2D_br0en")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=2134516425]
+shape = SubResource("SegmentShape2D_mnbdc")
+
+[connection signal="bonfire" from="Bonfire" to="." method="_on_bonfire_bonfire"]
 [connection signal="bonfire" from="Bonfire" to="Hud" method="_on_bonfire_bonfire"]
 [connection signal="death" from="Hud" to="Solair" method="_on_hud_death"]
 [connection signal="death" from="Hud" to="Death" method="_on_hud_death"]

@@ -40,6 +40,11 @@ signal bonfired
 @onready var heavy_hitbox = $Pivot/HeavyHitBox2D
 @onready var light_hitbox = $Pivot/LightHitBox2D
 
+func _ready() -> void:
+	var cena_atual = get_tree().current_scene.name
+	if cena_atual != "Florest":
+		estus_qtd = 3
+
 #Funcoes padroes
 func _physics_process(delta: float) -> void:
 	if pause_stamina_timer > 0:

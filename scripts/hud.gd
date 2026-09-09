@@ -26,6 +26,12 @@ var pause_time_stamina : float = 0
 #Signals
 signal death
 
+func _ready() -> void:
+	var cena_atual = get_tree().current_scene.name
+	if cena_atual != "Florest":
+		estus_unlock = true
+		estus_animation.show()
+
 #Funcoes Proprias
 func _process(delta: float) -> void:
 	if pause_time_stamina > 0:

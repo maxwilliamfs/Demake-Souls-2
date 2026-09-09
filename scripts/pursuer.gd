@@ -11,7 +11,7 @@ var actual_diretional : diretional
 var amplitude_float: float = 1.0
 var speed_float: float = 5.0 
 var time: float = 0.0
-var life : int = 1000
+var life : int = 600
 var damage : int = 40
 var player : CharacterBody2D
 var _velocity : int = 150
