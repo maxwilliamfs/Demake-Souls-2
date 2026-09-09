@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bhuh8oo4epbxh"]
+
+[ext_resource type="PackedScene" uid="uid://dro8a465hnib7" path="res://scenes/characters/pursuer.tscn" id="1_bhtn8"]
+[ext_resource type="PackedScene" uid="uid://c1jhdoqg27y6o" path="res://scenes/bonfire.tscn" id="2_n65jo"]
+
+[node name="BossFight" type="Node2D" unique_id=25091524]
+
+[node name="Pursuer" parent="." unique_id=609474206 instance=ExtResource("1_bhtn8")]
+
+[node name="Bonfire" parent="." unique_id=1476235993 instance=ExtResource("2_n65jo")]
