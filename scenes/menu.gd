@@ -28,8 +28,8 @@ func _process(_delta: float) -> void:
 			start.show()
 			start.modulate.a = 0
 			tween.set_parallel(true)
-			tween.tween_property(initial_S,"modulate:a",0,2)
-			tween.tween_property(start,"modulate:a",1,2)
+			tween.tween_property(initial_S,"modulate:a",0,0.3)
+			tween.tween_property(start,"modulate:a",1,0.5)
 			await tween.finished
 			initial_S.hide()
 			firt_menu = false
