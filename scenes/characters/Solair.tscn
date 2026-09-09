@@ -756,27 +756,27 @@ region = Rect2(576, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_be2o3"]
 atlas = ExtResource("9_fnbtf")
-region = Rect2(0, 0, 64, 64)
+region = Rect2(768, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qw3jp"]
 atlas = ExtResource("9_fnbtf")
-region = Rect2(64, 0, 64, 64)
+region = Rect2(704, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fy71t"]
 atlas = ExtResource("9_fnbtf")
-region = Rect2(128, 0, 64, 64)
+region = Rect2(640, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pai1x"]
 atlas = ExtResource("9_fnbtf")
-region = Rect2(192, 0, 64, 64)
+region = Rect2(576, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06iej"]
 atlas = ExtResource("9_fnbtf")
-region = Rect2(256, 0, 64, 64)
+region = Rect2(512, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yy8ql"]
 atlas = ExtResource("9_fnbtf")
-region = Rect2(320, 0, 64, 64)
+region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_elsh2"]
 atlas = ExtResource("9_fnbtf")
@@ -784,27 +784,27 @@ region = Rect2(384, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v6fof"]
 atlas = ExtResource("9_fnbtf")
-region = Rect2(448, 0, 64, 64)
+region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iy65k"]
 atlas = ExtResource("9_fnbtf")
-region = Rect2(512, 0, 64, 64)
+region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m0d1i"]
 atlas = ExtResource("9_fnbtf")
-region = Rect2(576, 0, 64, 64)
+region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7la21"]
 atlas = ExtResource("9_fnbtf")
-region = Rect2(640, 0, 64, 64)
+region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kohjt"]
 atlas = ExtResource("9_fnbtf")
-region = Rect2(704, 0, 64, 64)
+region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0hbef"]
 atlas = ExtResource("9_fnbtf")
-region = Rect2(768, 0, 64, 64)
+region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3cqr4"]
 atlas = ExtResource("10_l228d")
@@ -1598,7 +1598,7 @@ script = ExtResource("1_72w1d")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410345407]
 position = Vector2(0, -30)
 sprite_frames = SubResource("SpriteFrames_kejrx")
-animation = &"idle_left"
+animation = &"run_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2141661597]
 position = Vector2(3.2000005, -4)

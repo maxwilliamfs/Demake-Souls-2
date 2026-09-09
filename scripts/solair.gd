@@ -24,7 +24,7 @@ var roll : bool = false
 var stamina : float = 100
 var stamina_heavyatk : int = 20
 var stamina_lightatk : int = 10
-var stamina_velocity : float = 12
+var stamina_velocity : float = 14
 
 #Signals
 signal damage_taken(damage : int)

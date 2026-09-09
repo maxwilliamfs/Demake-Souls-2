@@ -11,7 +11,7 @@ var stamina_tween: Tween
 var is_dead : bool = false
 var souls : int = 0
 var roll_stamina : int = 40
-var stamina_velocity : float = 12
+var stamina_velocity : float = 14
 var estus_unlock : bool = false
 var pause_time_stamina : float = 0
 
