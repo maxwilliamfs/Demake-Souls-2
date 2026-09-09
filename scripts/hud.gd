@@ -11,6 +11,7 @@ var stamina_tween: Tween
 var is_dead : bool = false
 var souls : int = 0
 var roll_stamina : int = 40
+var stamina_velocity : float = 12
 var estus_unlock : bool = false
 var pause_time_stamina : float = 0
 
@@ -19,6 +20,7 @@ var pause_time_stamina : float = 0
 @onready var stamina_bar = $Control/Base_Life/Stamina
 @onready var estus_animation = $Control/Invetory/Estus
 @onready var souls_label = $Control/Souls_Label
+@onready var estus_audio = $Control/Invetory/estus_audio
 
 #Signals
 signal death
@@ -29,7 +31,7 @@ func _process(delta: float) -> void:
 		pause_time_stamina -= delta 
 	else:
 		if stamina < stamina_bar.max_value:
-			stamina += 9.0 * delta 
+			stamina += stamina_velocity * delta 
 			stamina_bar.value = stamina 
 	souls_label.text = str(souls)
 	if life <= 0 and !is_dead:
@@ -46,6 +48,7 @@ func use_estus() -> void:
 		return
 	if estus <= 0 or is_dead:
 		return
+	estus_audio.play()
 	estus -= 1
 	match estus:
 		0:

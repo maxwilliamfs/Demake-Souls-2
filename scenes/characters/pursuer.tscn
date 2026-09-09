@@ -1634,17 +1634,18 @@ radius = 99.20001
 height = 216.00003
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mnbdc"]
-radius = 41.600002
-height = 137.60002
+radius = 69.6
+height = 156.80002
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kejrx"]
-radius = 51.430737
+radius = 60.821053
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_skl48"]
-radius = 40.000004
-height = 139.20001
+radius = 69.600006
+height = 156.80002
 
 [node name="Pursuer" type="CharacterBody2D" unique_id=609474206]
+z_index = 1
 scale = Vector2(1.25, 1.25)
 collision_layer = 4
 collision_mask = 3
@@ -1683,7 +1684,8 @@ collision_layer = 32
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Hitbox1" unique_id=1645400993]
-position = Vector2(-52.000004, -4.8000007)
+position = Vector2(-24.800001, -4.7999997)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_mnbdc")
 
 [node name="Hitbox2" type="Area2D" parent="Pivot" unique_id=501091439]
@@ -1691,7 +1693,7 @@ collision_layer = 32
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Hitbox2" unique_id=1363725695]
-position = Vector2(-31.200003, -20.800001)
+position = Vector2(-19.2, -12.000002)
 shape = SubResource("CircleShape2D_kejrx")
 
 [node name="Hitbox3" type="Area2D" parent="Pivot" unique_id=687453968]
@@ -1699,7 +1701,8 @@ collision_layer = 32
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Hitbox3" unique_id=1986188763]
-position = Vector2(-53.600006, -4.8)
+position = Vector2(-24.800003, -4.8)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_skl48")
 
 [node name="CooldownTimer" type="Timer" parent="." unique_id=2096443161]

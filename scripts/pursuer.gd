@@ -23,7 +23,7 @@ var souls_dropped : int = 10000
 var attack_finisheds : int = 0
 var player_in_range : bool = false
 var actual_attack : int
-var attack_dash : int = 800
+var attack_dash : int = 650
 
 #Pre Processamento
 const SOUL_SCENE = preload("res://scenes/soul.tscn")

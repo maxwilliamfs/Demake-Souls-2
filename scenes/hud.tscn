@@ -6,8 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://0gmmsfso5r0" path="res://sprites/Itens/health_bar.png" id="3_047uy"]
 [ext_resource type="Texture2D" uid="uid://y3bt4fgoch20" path="res://sprites/Itens/stamin_bar.png" id="4_5pdws"]
 [ext_resource type="Texture2D" uid="uid://dqjt3ug3412c8" path="res://sprites/Itens/Estus_sprite_3.png" id="5_uo2fv"]
+[ext_resource type="AudioStream" uid="uid://csn7uhiblyekt" path="res://soundeffects/Estus.mp3" id="6_0i1j5"]
 [ext_resource type="Texture2D" uid="uid://bb84gg871v5gd" path="res://sprites/Itens/almas_hud_vazio.png" id="7_5pdws"]
 [ext_resource type="FontFile" uid="uid://crs5ghsfookk1" path="res://fonts/OptimusPrincepsSemiBold.ttf" id="8_hd3ao"]
+[ext_resource type="Texture2D" uid="uid://by4l5bfru2wjy" path="res://sprites/Itens/Espada_item.png" id="8_mphia"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_047uy"]
 atlas = ExtResource("5_uo2fv")
@@ -110,7 +112,10 @@ offset_right = 82.00001
 offset_bottom = 541.0
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("2_5ysmq")
-metadata/_edit_group_ = true
+
+[node name="estus_audio" type="AudioStreamPlayer" parent="Control/Invetory" unique_id=907071517]
+stream = ExtResource("6_0i1j5")
+volume_db = 6.0
 
 [node name="Estus" type="AnimatedSprite2D" parent="Control/Invetory" unique_id=1967806288]
 visible = false
@@ -118,6 +123,10 @@ position = Vector2(32.285713, 48.857147)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_kejrx")
 animation = &"Three"
+
+[node name="Sword" type="Sprite2D" parent="Control/Invetory" unique_id=1745505971]
+position = Vector2(51.999996, 33.714275)
+texture = ExtResource("8_mphia")
 
 [node name="Souls" type="Sprite2D" parent="Control" unique_id=677729776]
 position = Vector2(1167, 615)

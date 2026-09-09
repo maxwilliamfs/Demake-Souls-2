@@ -1256,6 +1256,7 @@ radius = 1.2666668
 height = 5.7333336
 
 [node name="Undead" type="CharacterBody2D" unique_id=1005191574 groups=["Enemy"]]
+z_index = 1
 scale = Vector2(1.25, 1.25)
 collision_layer = 4
 collision_mask = 3

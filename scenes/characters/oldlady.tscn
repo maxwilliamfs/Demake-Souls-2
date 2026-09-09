@@ -478,8 +478,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vx5a4"]
-radius = 13.0
-height = 52.0
+radius = 23.333334
+height = 61.333336
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kejrx"]
 radius = 68.67962
@@ -503,6 +503,8 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interect2D" unique_id=1572074976]
+z_index = 1
+position = Vector2(0.6666667, 2)
 shape = SubResource("CircleShape2D_kejrx")
 
 [connection signal="body_entered" from="Interect2D" to="." method="_on_interect_2d_body_entered"]

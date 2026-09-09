@@ -10,9 +10,9 @@ var actual_diretional : diretional
 
 #Atributos
 var vector_diretional : Vector2 = Vector2(0,0)
-var velocity_ : int = 170
+var velocity_ : int = 190
 var knockback_vector : Vector2
-var knockback_force : int = 300
+var knockback_force : int = 400
 var estus_taked : bool = false
 var estus_qtd : int = 0
 var heavy_damage : int = 50
@@ -24,6 +24,7 @@ var roll : bool = false
 var stamina : float = 100
 var stamina_heavyatk : int = 20
 var stamina_lightatk : int = 10
+var stamina_velocity : float = 12
 
 #Signals
 signal damage_taken(damage : int)
@@ -44,7 +45,7 @@ func _physics_process(delta: float) -> void:
 		pause_stamina_timer -= delta
 	else:
 		if stamina < 100:
-			stamina += 9.0 * delta 
+			stamina += stamina_velocity * delta 
 	vector_diretional.normalized()
 	match actual_state:
 		state.free:

@@ -14,7 +14,6 @@
 
 [node name="Solair" parent="." unique_id=252625353 instance=ExtResource("1_c13y7")]
 position = Vector2(308.00003, 189)
-metadata/_edit_group_ = true
 
 [node name="Undead" parent="." unique_id=1005191574 instance=ExtResource("2_8ho6b")]
 position = Vector2(1765, -108.000015)
@@ -32,7 +31,7 @@ actual_diretional = 1
 player_one = NodePath("../Solair")
 
 [node name="Pursuer" parent="." unique_id=609474206 instance=ExtResource("6_gbqnl")]
-position = Vector2(1758, 778)
+position = Vector2(2257, 443.99997)
 
 [node name="Death" parent="." unique_id=919273281 instance=ExtResource("7_gbqnl")]
 
