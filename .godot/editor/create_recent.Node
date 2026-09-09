@@ -1,21 +1,13 @@
-<<<<<<< Updated upstream
 TileMapLayer
 CollisionShape2D
 StaticBody2D
 Sprite2D
-=======
 Sprite2D
 CollisionShape2D
 StaticBody2D
-TileMapLayer
->>>>>>> Stashed changes
 Node
 AudioStreamPlayer
 Label
 TextureRect
 TextureProgressBar
 Area2D
-CanvasLayer
-Control
-Timer
-ColorRect
