@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #Enuns
-enum state {free,heal,heavyatk,lightatk,damage,death,roll,dialogue}
+enum state {free,heal,heavyatk,lightatk,damage,death,roll,dialogue,bonfire}
 enum diretional {left,right}
 
 #Declaraçoes de Enuns
@@ -31,6 +31,7 @@ signal damage_taken(damage : int)
 signal estus
 signal stamina_s(value : int)
 signal souls(value : int)
+signal bonfired
 
 #Instancias
 @onready var sprite_animation = $AnimatedSprite2D
@@ -91,6 +92,12 @@ func _physics_process(delta: float) -> void:
 			diretional_animation("idle_right","idle_left")
 			velocity = Vector2.ZERO
 			move_and_slide()
+
+func bonfire() -> void:
+	diretional_animation("bonfire_right","bonfire_left")
+	actual_state = state.bonfire
+	bonfired.emit()
+	estus_qtd = 3
 
 func dialogue() -> void:
 	actual_state = state.dialogue

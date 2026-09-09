@@ -21,6 +21,7 @@ var pause_time_stamina : float = 0
 @onready var estus_animation = $Control/Invetory/Estus
 @onready var souls_label = $Control/Souls_Label
 @onready var estus_audio = $Control/Invetory/estus_audio
+@onready var bonfire = $Bonfire
 
 #Signals
 signal death
@@ -50,15 +51,7 @@ func use_estus() -> void:
 		return
 	estus_audio.play()
 	estus -= 1
-	match estus:
-		0:
-			estus_animation.play("Zero")
-		1:
-			estus_animation.play("One")
-		2:
-			estus_animation.play("Two")
-		3:
-			estus_animation.play("Three")
+	estus_match_animation()
 	tween = create_tween()
 	life = clampi(life + estus_health, 0, life_bar.max_value)
 	tween.tween_property(life_bar, "value", life, 3).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
@@ -90,3 +83,34 @@ func _on_solair_stamina_s(value: int) -> void:
 	stamina = clampf(stamina - value, 0, stamina_bar.max_value) 
 	pause_time_stamina = 1.0
 	stamina_tween.tween_property(stamina_bar, "value", stamina, pause_time_stamina).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+
+func _on_bonfire_bonfire() -> void:
+	first_bonfire()
+
+func _on_bonfire_2_bonfire() -> void:
+	first_bonfire()
+
+func first_bonfire() -> void:
+		tween = create_tween()
+		bonfire.show()
+		bonfire.modulate.a = 0
+		tween.tween_property(bonfire, "modulate:a", 1, 2)
+		tween.tween_interval(1.0)
+		tween.tween_property(bonfire, "modulate:a", 0, 2)
+		await tween.finished
+		bonfire.hide()
+
+func estus_match_animation() -> void:
+	match estus:
+		0:
+			estus_animation.play("Zero")
+		1:
+			estus_animation.play("One")
+		2:
+			estus_animation.play("Two")
+		3:
+			estus_animation.play("Three")
+
+func _on_solair_bonfired() -> void:
+	estus = 3
+	estus_match_animation()

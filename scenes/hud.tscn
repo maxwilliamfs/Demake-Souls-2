@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bb84gg871v5gd" path="res://sprites/Itens/almas_hud_vazio.png" id="7_5pdws"]
 [ext_resource type="FontFile" uid="uid://crs5ghsfookk1" path="res://fonts/OptimusPrincepsSemiBold.ttf" id="8_hd3ao"]
 [ext_resource type="Texture2D" uid="uid://by4l5bfru2wjy" path="res://sprites/Itens/Espada_item.png" id="8_mphia"]
+[ext_resource type="Texture2D" uid="uid://d1jh3pr3goqkp" path="res://images/Fogueira acesa.png" id="11_0m4u7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_047uy"]
 atlas = ExtResource("5_uo2fv")
@@ -142,3 +143,8 @@ offset_bottom = 683.0
 text = "0"
 label_settings = SubResource("LabelSettings_0ucnw")
 horizontal_alignment = 2
+
+[node name="Bonfire" type="Sprite2D" parent="." unique_id=2087688140]
+visible = false
+position = Vector2(624, 379)
+texture = ExtResource("11_0m4u7")

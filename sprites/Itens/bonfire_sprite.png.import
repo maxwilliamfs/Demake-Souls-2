@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbyh662wubbpe"
-path="res://.godot/imported/bonfire_sprite.png-a501f798612f6781b73623a667e86cac.ctex"
+uid="uid://ciekil7urme3x"
+path="res://.godot/imported/bonfire_sprite.png-da0daec988701cef5893b201e2fe2854.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/TileSets/bonfire_sprite.png"
-dest_files=["res://.godot/imported/bonfire_sprite.png-a501f798612f6781b73623a667e86cac.ctex"]
+source_file="res://sprites/Itens/bonfire_sprite.png"
+dest_files=["res://.godot/imported/bonfire_sprite.png-da0daec988701cef5893b201e2fe2854.ctex"]
 
 [params]
 

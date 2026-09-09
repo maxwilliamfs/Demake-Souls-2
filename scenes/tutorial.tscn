@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://gjegy0bu5k1x" path="res://scenes/death.tscn" id="7_gbqnl"]
 [ext_resource type="PackedScene" uid="uid://bkwabm41lb5fe" path="res://scenes/dialogue.tscn" id="8_ckvwl"]
 [ext_resource type="PackedScene" uid="uid://dcgdbbqo50ga" path="res://scenes/pursuer_hud.tscn" id="9_nlqja"]
+[ext_resource type="PackedScene" uid="uid://c1jhdoqg27y6o" path="res://scenes/bonfire.tscn" id="10_0epgs"]
 
 [node name="Tutorial" type="Node2D" unique_id=20960459]
 y_sort_enabled = true
@@ -40,6 +41,13 @@ position = Vector2(521.0001, 277)
 
 [node name="Pursuer_HUD" parent="." unique_id=99543716 instance=ExtResource("9_nlqja")]
 
+[node name="Bonfire" parent="." unique_id=1476235993 instance=ExtResource("10_0epgs")]
+position = Vector2(890, 480)
+
+[node name="Bonfire2" parent="." unique_id=296447231 instance=ExtResource("10_0epgs")]
+position = Vector2(894, 262)
+
+[connection signal="bonfired" from="Solair" to="Hud" method="_on_solair_bonfired"]
 [connection signal="damage_taken" from="Solair" to="Hud" method="_on_solair_damage_taken"]
 [connection signal="estus" from="Solair" to="Hud" method="_on_solair_estus"]
 [connection signal="souls" from="Solair" to="Hud" method="_on_solair_souls"]
@@ -53,3 +61,5 @@ position = Vector2(521.0001, 277)
 [connection signal="change_animation" from="Dialogue" to="Oldlady" method="_on_dialogue_change_animation"]
 [connection signal="estus_unlocked" from="Dialogue" to="Solair" method="_on_dialogue_estus_unlocked"]
 [connection signal="estus_unlocked" from="Dialogue" to="Hud" method="_on_dialogue_estus_unlocked"]
+[connection signal="bonfire" from="Bonfire" to="Hud" method="_on_bonfire_bonfire"]
+[connection signal="bonfire" from="Bonfire2" to="Hud" method="_on_bonfire_2_bonfire"]
