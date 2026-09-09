@@ -1,6 +1,6 @@
-res://scenes/characters/Solair.tscn
-res://scripts/solair.gd
-res://scripts/hud.gd
+res://scenes/tilemaps/tile_florest.tscn
+res://scenes/floresta_mapa.tscn
 res://scenes/menu.gd
-res://default_bus_layout.tres
-res://scenes/hud.tscn
+res://scripts/hud.gd
+res://scripts/solair.gd
+res://scenes/characters/Solair.tscn
