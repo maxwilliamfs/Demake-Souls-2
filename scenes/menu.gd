@@ -46,6 +46,6 @@ func _process(_delta: float) -> void:
 			new_game = true
 		if Input.is_action_just_pressed("heal"):
 			if new_game:
-				get_tree().change_scene_to_file("res://scenes/tutorial.tscn")
+				get_tree().change_scene_to_file("res://scenes/fases/florest.tscn")
 			else:
 				get_tree().quit()

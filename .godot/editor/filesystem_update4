@@ -1,2 +1,12 @@
+<<<<<<< Updated upstream
 res://scenes/fases/florest.tscn
 res://scenes/fases/boss_fight.tscn
+=======
+res://scripts/dialogue.gd
+res://scenes/dialogue.tscn
+res://scenes/bonfire.gd
+res://scenes/menu.gd
+res://scenes/fases/florest.tscn
+res://scenes/camera.gd
+res://scripts/solair.gd
+>>>>>>> Stashed changes

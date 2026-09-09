@@ -8,6 +8,7 @@ enum diretional {left,right}
 
 #Signal
 signal bonfire
+signal boss_fight
 
 #Atributos
 var player_in_range : bool = false
@@ -23,7 +24,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if player_in_range and Input.is_action_just_pressed("heal"):
 		player.bonfire()
+		boss_fight.emit()
 		if first_time:
+			
 			bonfire.emit()
 			first_time = false
 

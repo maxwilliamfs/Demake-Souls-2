@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://jdub13r763bb" path="res://images/Estus_unlocked.png" id="4_03vpb"]
 [ext_resource type="Texture2D" uid="uid://bdxu2e3cn4d52" path="res://images/OldLady/Question_YES.png" id="5_ccu7b"]
 [ext_resource type="Texture2D" uid="uid://cyefjyxx63vbi" path="res://images/OldLady/Question_NO.png" id="6_6xhvj"]
+[ext_resource type="Texture2D" uid="uid://de2kyjvbpld1f" path="res://images/Voce sente a maldio lhe transportando ao seu pior pesadelo.png" id="9_03vpb"]
 
 [node name="Dialogue" type="CanvasLayer" unique_id=1821632590]
 script = ExtResource("1_x1cjp")
@@ -59,3 +60,9 @@ visible = false
 position = Vector2(609, 552)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_6xhvj")
+
+[node name="travel" type="Sprite2D" parent="." unique_id=125222843]
+visible = false
+position = Vector2(609, 552)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("9_03vpb")

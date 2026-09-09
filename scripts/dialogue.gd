@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 #Enuns
-enum dialogue {talk_1,talk_2,talk_3,talk_4,estus,question_yes,question_no,nothing}
+enum dialogue {talk_1,talk_2,talk_3,talk_4,estus,question_yes,question_no,nothing,boss}
 
 #Declaracaop de enuns
 var actual_dialogue : dialogue = dialogue.nothing
@@ -19,6 +19,7 @@ signal change_animation(animation : String)
 @onready var estus = $OldLady/Estus
 @onready var question_yes = $OldLady/Question_YES
 @onready var question_no = $OldLady/Question_NO
+@onready var travel = $travel
 
 func _process(_delta: float) -> void:
 	if actual_dialogue == dialogue.question_yes and Input.is_action_just_pressed("mov_right"):
@@ -46,7 +47,13 @@ func _process(_delta: float) -> void:
 			dialogue.question_no:
 				cancel.emit(false)
 				actual_dialogue = dialogue.nothing
+			dialogue.boss:
+				travel.show()
+				if Input.is_action_just_pressed("heal"):
+					get_tree().change_scene_to_file("res://scenes/fases/florest.tscn")
 	choose_dialogue()
+
+
 
 func _on_oldlady_talk() -> void:
 	await get_tree().process_frame
@@ -76,3 +83,7 @@ func choose_dialogue():
 			question_yes.show()
 		dialogue.question_no:
 			question_no.show()
+
+
+func _on_bonfire_boss_fight() -> void:
+	actual_dialogue = dialogue.boss
