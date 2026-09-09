@@ -60,12 +60,13 @@ undead.gd::GDScript::4225233595062521834::1788822100::0::1::::<>CharacterBody2D<
 ::res://soundeffects/::1788922812
 died_effect.mp3::AudioStreamMP3::5932066202067872927::1788886863::1788467887::1::::<><><>0<>0<>a7d2e5ce86f5a4dbda71c3aff5568397<>res://.godot/imported/died_effect.mp3-a31e13c2ae7597ea1549afc5b5728833.mp3str::
 Estus.mp3::AudioStreamMP3::6065056503403156615::1788922742::1788922812::1::::<><><>0<>0<>16d47eae6609639cf9ec6239ba258246<>res://.godot/imported/Estus.mp3-4cd7292b7f4fb6bde9ca0ecc461f7cd8.mp3str::
-::res://sprites/::1788972311
-::res://sprites/Itens/::1788972311
+::res://sprites/::1788973203
+::res://sprites/Itens/::1788973198
 almas_hud.png::CompressedTexture2D::4534973865638895143::1788886768::1788387871::1::::<><><>0<>0<>e8e9325fa716baa57dd381be9c8ea877<>res://.godot/imported/almas_hud.png-dfaeecd6ce2f7af7b705d76ff7e63c60.ctex::
 almas_hud_vazio.png::CompressedTexture2D::2526505868376948047::1788886768::1788450502::1::::<><><>0<>0<>524a6cdc26f23f944bf77b35b5c22c5c<>res://.godot/imported/almas_hud_vazio.png-54ad2126a96cab9d5b70f2d5e976f7ae.ctex::
 Alma_no_chao.png::CompressedTexture2D::8062164108223827728::1788886768::1788387871::1::::<><><>0<>0<>bbfe5dc410547930f7760cd8e7c5b4d5<>res://.godot/imported/Alma_no_chao.png-1d5b167204beceb93f5f4528a7a5becf.ctex::
 barra_vida_Pursuer.png::CompressedTexture2D::2780679395063148397::1788886768::1788821718::1::::<><><>0<>0<>434d64e869e7c996d85c6cc0eaa7d768<>res://.godot/imported/barra_vida_Pursuer.png-5ab0c73c133a706fc278c3f2f51ce4b5.ctex::
+bonfire_sprite.png::CompressedTexture2D::5343231711908100431::1788972311::1788973223::1::::<><><>0<>0<>151baad14690ae9b39ca611b05618606<>res://.godot/imported/bonfire_sprite.png-da0daec988701cef5893b201e2fe2854.ctex::
 Espada_item.png::CompressedTexture2D::4131541407658777882::1788886768::1788450658::1::::<><><>0<>0<>5600fcd32b900f03489b26b00c978d0b<>res://.godot/imported/Espada_item.png-9c77a9a7e229e585dba06ed787c3087d.ctex::
 Estus_sprite_3.png::CompressedTexture2D::8302067635214087409::1788886768::1788387871::1::::<><><>0<>0<>3d9785f77622b02dee37116d4d78c32d<>res://.godot/imported/Estus_sprite_3.png-e84b341efdfd01a24ed28ef80a194c55.ctex::
 Estus_sprite_5.png::CompressedTexture2D::5138645579927485054::1788886768::1788387871::1::::<><><>0<>0<>7372f9763051481dae79299dc07c24c5<>res://.godot/imported/Estus_sprite_5.png-ba0f83bf21b2614dcadc138f6f12dd09.ctex::
@@ -120,8 +121,6 @@ pursuer_idle_left.png::CompressedTexture2D::166984818616558089::1788886768::1788
 pursuer_idle_right.png::CompressedTexture2D::4606759199645354035::1788886768::1788462631::1::::<><><>0<>0<>9e2f75e2dffe1cd5caffe88d10c09129<>res://.godot/imported/pursuer_idle_right.png-931c467d9309aca82fe85d19fcf8162d.ctex::
 Pursuer_walk_left.png::CompressedTexture2D::1969577556578589704::1788886768::1788875649::1::::<><><>0<>0<>ba48565a6da15d4b1461c76dbbbe067d<>res://.godot/imported/Pursuer_walk_left.png-976a316a78b8377775fad2e6ed913763.ctex::
 Pursuer_walk_right.png::CompressedTexture2D::7911882551561621043::1788886768::1788462631::1::::<><><>0<>0<>bd2f66655c18e76a35e611494e950674<>res://.godot/imported/Pursuer_walk_right.png-150eb29f76ac12f997d96191d9562064.ctex::
-::res://sprites/TileSets/::1788972311
-bonfire_sprite.png::CompressedTexture2D::2506636642948905806::1788972311::1788972311::1::::<><><>0<>0<>22c93176dd9b565d460c3ebc620a0cf8<>res://.godot/imported/bonfire_sprite.png-a501f798612f6781b73623a667e86cac.ctex::
 ::res://sprites/undead/::1788112497
 enemy_arms_up_pose.jpg::CompressedTexture2D::3246316443605374590::1788056530::1788112497::1::::<><><>0<>0<>f9a205dde927925568135b082b9b4cf7<>res://.godot/imported/enemy_arms_up_pose.jpg-b70775c51773fa6f85068878cf72075b.ctex::
 ::res://sprites/undead/actions/::1788462631

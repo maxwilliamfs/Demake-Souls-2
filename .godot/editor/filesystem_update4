@@ -1,0 +1,7 @@
+res://scenes/bonfire.tscn
+res://scenes/bonfire.gd
+res://scripts/hud.gd
+res://scenes/tutorial.tscn
+res://scenes/hud.tscn
+res://scenes/pursuer_hud.tscn
+res://scripts/solair.gd

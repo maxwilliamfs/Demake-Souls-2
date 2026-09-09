@@ -31,6 +31,7 @@ signal damage_taken(damage : int)
 signal estus
 signal stamina_s(value : int)
 signal souls(value : int)
+signal bonfired
 
 #Instancias
 @onready var sprite_animation = $AnimatedSprite2D
@@ -95,6 +96,8 @@ func _physics_process(delta: float) -> void:
 func bonfire() -> void:
 	diretional_animation("bonfire_right","bonfire_left")
 	actual_state = state.bonfire
+	bonfired.emit()
+	estus_qtd = 3
 
 func dialogue() -> void:
 	actual_state = state.dialogue
