@@ -19,7 +19,7 @@ O **Demake Souls 2** é um projeto académico desenvolvido para a disciplina de 
 * **Godot Engine** (versão 3.x ou 4.x) instalada.
 
 1. **Clona o repositório:**
-   `git clone https://github.com/maxwilliamfs/the-make-souls-2.git`
+   `git clone (https://github.com/maxwilliamfs/Demake-Souls-2)`
 2. Abre a **Godot Engine**.
 3. Importar o ficheiro `project.godot`.
 4. Jogar pela Godot Engine
