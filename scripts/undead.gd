@@ -167,3 +167,4 @@ func _on_hitbox_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_in
 		player = area.owner
 		if player and player.has_method("take_damage"):
 			player.take_damage(damage,global_position)
+			hitbox.monitoring = false

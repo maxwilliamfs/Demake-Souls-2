@@ -12,7 +12,7 @@ var actual_diretional : diretional
 var vector_diretional : Vector2 = Vector2(0,0)
 var velocity_ : int = 190
 var knockback_vector : Vector2
-var knockback_force : int = 400
+var knockback_force : int = 1000
 var estus_taked : bool = false
 var estus_qtd : int = 0
 var heavy_damage : int = 50

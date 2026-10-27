@@ -23,7 +23,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if firt_menu:
-		if Input.is_action_pressed("heal"):
+		if Input.is_action_pressed("Enter"):
 			var tween : Tween = create_tween()
 			start.show()
 			start.modulate.a = 0
@@ -44,7 +44,7 @@ func _process(_delta: float) -> void:
 			new_game_l.self_modulate = Color("#ffffff")     
 			exit_l.self_modulate = Color("#515151") 
 			new_game = true
-		if Input.is_action_just_pressed("heal"):
+		if Input.is_action_just_pressed("Enter"):
 			if new_game:
 				get_tree().change_scene_to_file("res://scenes/fases/florest.tscn")
 			else:

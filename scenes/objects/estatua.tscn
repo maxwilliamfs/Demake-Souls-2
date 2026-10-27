@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://du4vn6iqe4fwj"]
+
+[ext_resource type="Texture2D" uid="uid://eqlhkjv5f1rk" path="res://tileset/ruins/Props.png" id="1_oc8cd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jujiu"]
+size = Vector2(47, 61)
+
+[node name="Estatua" type="Node2D" unique_id=19525450]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=856193524]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-1, -80)
+texture = ExtResource("1_oc8cd")
+region_enabled = true
+region_rect = Rect2(204.87622, 16.29419, 50.294617, 159.57677)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=320608781]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2100923340]
+position = Vector2(0.5, -18.5)
+shape = SubResource("RectangleShape2D_jujiu")

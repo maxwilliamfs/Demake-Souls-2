@@ -1,2 +1,8 @@
-res://scenes/fases/boss_fight.tscn
-res://scripts/pursuer.gd
+res://scenes/menu.tscn
+res://scenes/menu.gd
+res://scripts/undead.gd
+res://scenes/fases/florest.tscn
+res://scripts/solair.gd
+res://scripts/hud.gd
+res://scenes/fases/final.tscn
+res://scenes/objects/estatua.tscn

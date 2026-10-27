@@ -18576,6 +18576,10 @@ tile_set = SubResource("TileSet_7numd")
 position = Vector2(426, 194)
 
 [node name="Camera" parent="." unique_id=263345573 instance=ExtResource("7_1xqnc")]
+limit_left = -300
+limit_top = -400
+limit_right = 1750
+limit_bottom = 900
 
 [node name="Hud" parent="." unique_id=1522043168 instance=ExtResource("9_gj60p")]
 

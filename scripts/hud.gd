@@ -45,7 +45,7 @@ func _process(delta: float) -> void:
 		death.emit()
 		is_dead = true
 	if is_dead:
-		if Input.is_action_pressed("heal"):
+		if Input.is_action_pressed("Enter"):
 			get_tree().reload_current_scene()
 
 
