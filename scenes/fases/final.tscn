@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ddnev8nrd6qv2" path="res://scenes/fases/final.gd" id="1_0f5le"]
 [ext_resource type="Texture2D" uid="uid://c7wwnlo03ivtd" path="res://tileset/Florest/Tileset-Terrain2.png" id="2_ipla3"]
 [ext_resource type="Texture2D" uid="uid://eqlhkjv5f1rk" path="res://tileset/ruins/Props.png" id="3_5uhgp"]
-[ext_resource type="Texture2D" uid="uid://cvj772qd7vu7l" path="res://tileset/Florest/Arvore_pra_caramba.png" id="4_f0h8f"]
+[ext_resource type="Texture2D" uid="uid://cvj772qd7vu7l" path="res://tileset/Florest/Trees.png" id="4_f0h8f"]
 [ext_resource type="Texture2D" uid="uid://fmyapf5jydks" path="res://tileset/ruins/Wall.png" id="5_2d3pp"]
 [ext_resource type="Texture2D" uid="uid://bjcxkwsaf2sgg" path="res://tileset/ruins/Plants.png" id="5_blpfd"]
 [ext_resource type="PackedScene" uid="uid://djp75rh3ixcco" path="res://scenes/characters/Solair.tscn" id="6_njbp1"]
