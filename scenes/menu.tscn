@@ -4,6 +4,15 @@
 [ext_resource type="FontFile" uid="uid://crs5ghsfookk1" path="res://fonts/OptimusPrincepsSemiBold.ttf" id="1_vjb58"]
 [ext_resource type="FontFile" uid="uid://cb15ddmoqn5vh" path="res://fonts/OptimusPrinceps.ttf" id="2_con2f"]
 [ext_resource type="LabelSettings" uid="uid://bn337vajrgxp0" path="res://fonts/tres/little_title.tres" id="3_con2f"]
+[ext_resource type="Texture2D" uid="uid://o1llmdso3ffw" path="res://sprites/SimpleKeys/Classic/Light/Single PNGs/W.png" id="5_i6lef"]
+[ext_resource type="Texture2D" uid="uid://cry12edo52ndp" path="res://sprites/SimpleKeys/Classic/Light/Single PNGs/H.png" id="6_6cdou"]
+[ext_resource type="Texture2D" uid="uid://mm55lwpfgq81" path="res://sprites/SimpleKeys/Classic/Light/Single PNGs/D.png" id="6_70i5f"]
+[ext_resource type="Texture2D" uid="uid://d1ptf0eyxvoc" path="res://sprites/SimpleKeys/Classic/Light/Single PNGs/J.png" id="7_i42df"]
+[ext_resource type="Texture2D" uid="uid://docm51iw0isjo" path="res://sprites/SimpleKeys/Classic/Light/Single PNGs/S.png" id="7_mj5lg"]
+[ext_resource type="Texture2D" uid="uid://dyh74s2v4o861" path="res://sprites/SimpleKeys/Classic/Light/Single PNGs/K.png" id="8_7jp70"]
+[ext_resource type="Texture2D" uid="uid://02m1680sfhi3" path="res://sprites/SimpleKeys/Classic/Light/Single PNGs/A.png" id="8_ufwb2"]
+[ext_resource type="Texture2D" uid="uid://c6ijxsk73hy5j" path="res://images/controller.jpg" id="9_6cdou"]
+[ext_resource type="Texture2D" uid="uid://c01pbdgmow8n7" path="res://sprites/SimpleKeys/Classic/Light/Single PNGs/L.png" id="9_mxgkd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kejrx"]
 font = ExtResource("1_vjb58")
@@ -25,6 +34,18 @@ font_size = 30
 font = ExtResource("2_con2f")
 font_size = 30
 
+[sub_resource type="LabelSettings" id="LabelSettings_jujiu"]
+font = ExtResource("2_con2f")
+font_size = 120
+
+[sub_resource type="LabelSettings" id="LabelSettings_0f25k"]
+font = ExtResource("2_con2f")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_3hqjo"]
+font = ExtResource("2_con2f")
+font_size = 40
+
 [node name="Menu" type="Control" unique_id=1850004001]
 layout_mode = 3
 anchors_preset = 15
@@ -43,6 +64,7 @@ offset_bottom = 781.0
 color = Color(0, 0, 0, 1)
 
 [node name="Initial" type="Control" parent="." unique_id=1197525503]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -71,7 +93,7 @@ offset_left = 478.0
 offset_top = 557.0
 offset_right = 757.0
 offset_bottom = 589.0
-text = "Aperte o botao Start"
+text = "Aperte o botao Start ou Enter"
 label_settings = SubResource("LabelSettings_br0en")
 
 [node name="Start" type="Control" parent="." unique_id=339952926]
@@ -107,3 +129,116 @@ offset_right = 656.0
 offset_bottom = 605.0
 text = "sair"
 label_settings = SubResource("LabelSettings_skl48")
+
+[node name="Controls" type="Control" parent="." unique_id=15935620]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Controls" unique_id=885939937]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 10.0
+offset_right = 953.0
+offset_bottom = 159.0
+text = "Controles"
+label_settings = SubResource("LabelSettings_jujiu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Controls" unique_id=92623436]
+position = Vector2(126.49999, 169.784)
+scale = Vector2(3, 3.223)
+texture = ExtResource("5_i6lef")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Controls" unique_id=1014402388]
+position = Vector2(127.49999, 320.78397)
+scale = Vector2(3, 3.223)
+texture = ExtResource("6_6cdou")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Controls" unique_id=2004350533]
+position = Vector2(127.49999, 411.78397)
+scale = Vector2(3, 3.223)
+texture = ExtResource("7_i42df")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Controls" unique_id=1440194703]
+position = Vector2(128.5, 503.784)
+scale = Vector2(3, 3.223)
+texture = ExtResource("8_7jp70")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Controls" unique_id=1353558737]
+position = Vector2(129.5, 601.784)
+scale = Vector2(3, 3.223)
+texture = ExtResource("9_mxgkd")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Controls" unique_id=689466549]
+position = Vector2(193.50003, 230.784)
+scale = Vector2(3, 3.223)
+texture = ExtResource("6_70i5f")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Controls" unique_id=527048514]
+position = Vector2(127.49999, 229.784)
+scale = Vector2(3, 3.223)
+texture = ExtResource("7_mj5lg")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Controls" unique_id=756824427]
+position = Vector2(64.5, 229.784)
+scale = Vector2(3, 3.223)
+texture = ExtResource("8_ufwb2")
+
+[node name="Label2" type="Label" parent="Controls" unique_id=279828036]
+layout_mode = 0
+offset_left = 261.5
+offset_top = 179.784
+offset_right = 460.5
+offset_bottom = 217.784
+text = "Movimentação"
+label_settings = SubResource("LabelSettings_0f25k")
+
+[node name="Label3" type="Label" parent="Controls" unique_id=454783099]
+layout_mode = 0
+offset_left = 197.5
+offset_top = 305.784
+offset_right = 396.5
+offset_bottom = 343.784
+text = "Usar Item"
+label_settings = SubResource("LabelSettings_0f25k")
+
+[node name="Label4" type="Label" parent="Controls" unique_id=848046283]
+layout_mode = 0
+offset_left = 192.5
+offset_top = 390.784
+offset_right = 391.5
+offset_bottom = 428.784
+text = "Ataque fraco"
+label_settings = SubResource("LabelSettings_0f25k")
+
+[node name="Label5" type="Label" parent="Controls" unique_id=1170106127]
+layout_mode = 0
+offset_left = 190.5
+offset_top = 486.784
+offset_right = 389.5
+offset_bottom = 524.784
+text = "Ataque forte"
+label_settings = SubResource("LabelSettings_0f25k")
+
+[node name="Label6" type="Label" parent="Controls" unique_id=161310763]
+layout_mode = 0
+offset_left = 195.5
+offset_top = 584.784
+offset_right = 394.5
+offset_bottom = 622.784
+text = "rolar"
+label_settings = SubResource("LabelSettings_0f25k")
+
+[node name="Controller" type="Sprite2D" parent="Controls" unique_id=1845474309]
+position = Vector2(877, 367.00003)
+scale = Vector2(0.6, 0.515)
+texture = ExtResource("9_6cdou")
+
+[node name="Label7" type="Label" parent="Controls" unique_id=1039712998]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 665.0
+offset_right = 1211.0
+offset_bottom = 719.0
+text = "Pressione Start ou Enter para continuar"
+label_settings = SubResource("LabelSettings_3hqjo")

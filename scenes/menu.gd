@@ -10,6 +10,7 @@ var new_game : bool = true
 @onready var start = $Start
 @onready var new_game_l = $Start/new_game
 @onready var exit_l = $Start/exit
+@onready var controls = $Controls
 
 func _ready() -> void:
 	initial.modulate.a = 0

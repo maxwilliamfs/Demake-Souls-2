@@ -1,3 +1,2 @@
-res://scenes/fases/florest.tscn
-res://scenes/fases/boss_fight.tscn
-res://scenes/fases/final.tscn
+res://scenes/menu.tscn
+res://scenes/menu.gd
