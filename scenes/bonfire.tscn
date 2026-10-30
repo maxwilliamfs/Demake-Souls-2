@@ -92,6 +92,7 @@ animations = [{
 radius = 49.0
 
 [node name="Bonfire" type="Area2D" unique_id=1476235993]
+z_as_relative = false
 y_sort_enabled = true
 collision_mask = 2
 script = ExtResource("1_xk3wp")

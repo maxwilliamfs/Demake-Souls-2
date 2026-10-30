@@ -1,7 +1,10 @@
 extends Control
 
+#Enuns
+enum state {initial,start,controls}
+
 #Atributos
-var firt_menu : bool = true
+var menu_state : state = state.initial
 var new_game : bool = true
 
 #Instancias
@@ -23,7 +26,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if firt_menu:
+	if menu_state == state.initial:
 		if Input.is_action_pressed("Enter"):
 			var tween : Tween = create_tween()
 			start.show()
@@ -33,8 +36,8 @@ func _process(_delta: float) -> void:
 			tween.tween_property(start,"modulate:a",1,0.5)
 			await tween.finished
 			initial_S.hide()
-			firt_menu = false
-	else:
+			menu_state = state.start
+	elif menu_state == state.start:
 		if Input.is_action_just_pressed("mov_down") and new_game:
 			print("Indo para Sair")
 			new_game_l.self_modulate = Color("#515151") 
@@ -47,6 +50,17 @@ func _process(_delta: float) -> void:
 			new_game = true
 		if Input.is_action_just_pressed("Enter"):
 			if new_game:
-				get_tree().change_scene_to_file("res://scenes/fases/florest.tscn")
+				var tween : Tween = create_tween()
+				controls.show()
+				controls.modulate.a = 0
+				initial.hide()
+				tween.set_parallel(true)
+				tween.tween_property(start,"modulate:a",0,0.3)
+				tween.tween_property(controls,"modulate:a",1,0.5)
+				await tween.finished
+				menu_state = state.controls
 			else:
 				get_tree().quit()
+	elif menu_state == state.controls:
+		if Input.is_action_just_pressed("Enter"):
+			get_tree().change_scene_to_file("res://scenes/fases/florest.tscn")

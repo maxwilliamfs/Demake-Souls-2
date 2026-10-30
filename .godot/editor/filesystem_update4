@@ -1,2 +1,7 @@
 res://scenes/menu.tscn
 res://scenes/menu.gd
+res://scenes/fases/final.tscn
+res://scenes/fases/boss_fight.tscn
+res://scenes/fases/florest.tscn
+res://scenes/bonfire.tscn
+res://scenes/characters/Solair.tscn

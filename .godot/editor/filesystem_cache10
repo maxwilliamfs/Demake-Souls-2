@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1793302066
+::res://::1793365479
 default_bus_layout.tres::AudioBusLayout::9009006389903374977::1792778716::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::6451270279686810702::1792778716::1792778741::1::::<><><>0<>0<>63d43aa2f5b3a353480a2b3d20c10551<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1793132389::0::1::::<><><>0<>0<><>::
@@ -11,7 +11,7 @@ OptimusPrincepsSemiBold.ttf::FontFile::6005043129068630406::1792778716::17927787
 little_title.tres::LabelSettings::3358436552725865939::1792778716::0::1::::<><><>0<>0<><>::uid://cb15ddmoqn5vh::::res://fonts/OptimusPrinceps.ttf
 ::res://github/::1792779610
 photo.png::CompressedTexture2D::8800386164263658529::1792778858::1792779610::1::::<><><>0<>0<>d60f1b9d09e17036ed3fd8e9d61aa56c<>res://.godot/imported/photo.png-47f3f2ff2c332568910d99315cc39897.ctex::
-::res://images/::1793302337
+::res://images/::1793302338
 controller.jpg::CompressedTexture2D::6965799030752396637::1793302319::1793302338::1::::<><><>0<>0<>4b9a4008b9f31d8f8c0896d2cf43ac8c<>res://.godot/imported/controller.jpg-777a4a140da5c960bdad19cb68718bf7.ctex::
 Estus_unlocked.png::CompressedTexture2D::639110261331748139::1792778718::1792778716::1::::<><><>0<>0<>6c3b977e229ff4b5b3a55b1ba73507ab<>res://.godot/imported/Estus_unlocked.png-21998e25690e2908637f3cb0e7144a4d.ctex::
 Fogueira acesa.png::CompressedTexture2D::9003227222026091699::1792778718::1792778716::1::::<><><>0<>0<>104acb0ab2e20f46c86ab45765d28559<>res://.godot/imported/Fogueira acesa.png-7af9c63dcd7a07f58de0eef84b863145.ctex::
@@ -29,7 +29,7 @@ YOU DIED.png::CompressedTexture2D::1117241314639624976::1792778718::1792778716::
 4.png::CompressedTexture2D::2042008931812932783::1792778717::1792778716::1::::<><><>0<>0<>6b4b9b7f545ba010959796e6a3096236<>res://.godot/imported/4.png-602d2cdc7abb11fe8fec649be9fa8443.ctex::
 Question_NO.png::CompressedTexture2D::6465952080002665838::1792778717::1792778716::1::::<><><>0<>0<>679b0309b86a3e610875d983e249139c<>res://.godot/imported/Question_NO.png-5b802af5ef940804cd5bcf6d0e44363d.ctex::
 Question_YES.png::CompressedTexture2D::2645730712698646299::1792778717::1792778716::1::::<><><>0<>0<>ddbd681479ec2f3e12875a7fb7d9e659<>res://.godot/imported/Question_YES.png-3514c9208c839461713a62f595bfddf5.ctex::
-::res://scenes/::1793200253
+::res://scenes/::1793302896
 bonfire.gd::GDScript::8062748370808213953::1792778716::0::1::::<>Area2D<><>0<>0<><>::
 bonfire.tscn::PackedScene::6616761838446414844::1792778716::0::1::::<><><>0<>0<><>::uid://ciekil7urme3x::::res://sprites/Itens/bonfire_sprite.png<>uid://dm4wj1tfy4e8h::::res://scenes/bonfire.gd
 camera.gd::GDScript::5861246556503853657::1792778716::0::1::::<>Camera2D<><>0<>0<><>::
@@ -38,8 +38,8 @@ death.tscn::PackedScene::439967343603095107::1792778716::0::1::::<><><>0<>0<><>:
 dialogue.tscn::PackedScene::3133727892732269534::1792778716::0::1::::<><><>0<>0<><>::uid://cvgxc4dn7fowt::::res://images/OldLady/1.png<>uid://dxy35nbm8pwt1::::res://scripts/dialogue.gd<>uid://cs3wrpw67r3n::::res://images/OldLady/3.png<>uid://bxpgjsqwlk2ys::::res://images/OldLady/2.png<>uid://4dfuau33e0kx::::res://images/OldLady/4.png<>uid://jdub13r763bb::::res://images/Estus_unlocked.png<>uid://bdxu2e3cn4d52::::res://images/OldLady/Question_YES.png<>uid://cyefjyxx63vbi::::res://images/OldLady/Question_NO.png<>uid://de2kyjvbpld1f::::res://images/Voce sente a maldio lhe transportando ao seu pior pesadelo.png
 floresta_mapa.tscn::PackedScene::8483752311790978931::1792778716::0::1::::<><><>0<>0<><>::uid://djp75rh3ixcco::::res://scenes/characters/Solair.tscn<>uid://b3kscirt65qko::::res://scenes/camera.tscn<>uid://bqwb4fj1w8r8h::::res://scenes/tilemaps/tile_florest.tscn
 hud.tscn::PackedScene::8777481229967807070::1792778716::0::1::::<><><>0<>0<><>::uid://cf8pjs4blxcws::::res://scripts/hud.gd<>uid://cyumqoav3qcst::::res://sprites/Itens/moldura_vida.png<>uid://cr8u0i7rbodoo::::res://sprites/Itens/slots_Inventario_vazios.png<>uid://0gmmsfso5r0::::res://sprites/Itens/health_bar.png<>uid://y3bt4fgoch20::::res://sprites/Itens/stamin_bar.png<>uid://dqjt3ug3412c8::::res://sprites/Itens/Estus_sprite_3.png<>uid://csn7uhiblyekt::::res://soundeffects/Estus.mp3<>uid://bb84gg871v5gd::::res://sprites/Itens/almas_hud_vazio.png<>uid://crs5ghsfookk1::::res://fonts/OptimusPrincepsSemiBold.ttf<>uid://by4l5bfru2wjy::::res://sprites/Itens/Espada_item.png<>uid://d1jh3pr3goqkp::::res://images/Fogueira acesa.png
-menu.gd::GDScript::8019231710832333237::1793130033::0::1::::<>Control<><>0<>0<><>::
-menu.tscn::PackedScene::5307322356330541771::1793200253::0::1::::<><><>0<>0<><>::uid://dmittskfqm1nt::::res://scenes/menu.gd<>uid://crs5ghsfookk1::::res://fonts/OptimusPrincepsSemiBold.ttf<>uid://cb15ddmoqn5vh::::res://fonts/OptimusPrinceps.ttf<>uid://bn337vajrgxp0::::res://fonts/tres/little_title.tres
+menu.gd::GDScript::8019231710832333237::1793302880::0::1::::<>Control<><>0<>0<><>::
+menu.tscn::PackedScene::5307322356330541771::1793302896::0::1::::<><><>0<>0<><>::uid://dmittskfqm1nt::::res://scenes/menu.gd<>uid://crs5ghsfookk1::::res://fonts/OptimusPrincepsSemiBold.ttf<>uid://cb15ddmoqn5vh::::res://fonts/OptimusPrinceps.ttf<>uid://bn337vajrgxp0::::res://fonts/tres/little_title.tres<>uid://o1llmdso3ffw::::res://sprites/SimpleKeys/Classic/Light/Single PNGs/W.png<>uid://cry12edo52ndp::::res://sprites/SimpleKeys/Classic/Light/Single PNGs/H.png<>uid://mm55lwpfgq81::::res://sprites/SimpleKeys/Classic/Light/Single PNGs/D.png<>uid://d1ptf0eyxvoc::::res://sprites/SimpleKeys/Classic/Light/Single PNGs/J.png<>uid://docm51iw0isjo::::res://sprites/SimpleKeys/Classic/Light/Single PNGs/S.png<>uid://dyh74s2v4o861::::res://sprites/SimpleKeys/Classic/Light/Single PNGs/K.png<>uid://02m1680sfhi3::::res://sprites/SimpleKeys/Classic/Light/Single PNGs/A.png<>uid://c6ijxsk73hy5j::::res://images/controller.jpg<>uid://c01pbdgmow8n7::::res://sprites/SimpleKeys/Classic/Light/Single PNGs/L.png
 pursuer_hud.tscn::PackedScene::215065000575568448::1792778716::0::1::::<><><>0<>0<><>::uid://w0hhuk8mldhr::::res://scripts/menssages.gd<>uid://cv0soyuoafwuu::::res://images/Perseguidor derrotado.png<>uid://cslofg7mhsv37::::res://sprites/Itens/moldura_vida_Pursuer.png<>uid://bfu8nbge671l6::::res://sprites/Itens/barra_vida_Pursuer.png<>uid://cb15ddmoqn5vh::::res://fonts/OptimusPrinceps.ttf
 soul.tscn::PackedScene::216957441949975984::1792778716::0::1::::<><><>0<>0<><>::uid://dm4mwux2m0pi3::::res://sprites/Itens/Alma_no_chao.png<>uid://7cqx86375b8h::::res://scripts/soul.gd
 tutorial.tscn::PackedScene::1972019139012565601::1792778716::0::1::::<><><>0<>0<><>::uid://djp75rh3ixcco::::res://scenes/characters/Solair.tscn<>uid://c8wbba43cdtj4::::res://scenes/characters/Undead.tscn<>uid://dxb43lp8i4pcw::::res://scenes/hud.tscn<>uid://gdoprtwc6wul::::res://scenes/characters/oldlady.tscn<>uid://b3kscirt65qko::::res://scenes/camera.tscn<>uid://dro8a465hnib7::::res://scenes/characters/pursuer.tscn<>uid://gjegy0bu5k1x::::res://scenes/death.tscn<>uid://bkwabm41lb5fe::::res://scenes/dialogue.tscn<>uid://dcgdbbqo50ga::::res://scenes/pursuer_hud.tscn<>uid://c1jhdoqg27y6o::::res://scenes/bonfire.tscn
